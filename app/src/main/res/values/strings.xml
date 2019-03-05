@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Lasagne Dinner</string>
+    <string name="title_activity_rezept">Rezept</string>
+    <string name="vorspeise_titel">Titel</string>
+    <string name="vorspeise_beschreibung">Vorspeise: Beschreibung</string>
+    <string name="vorspeise_description">Description</string>
+</resources>

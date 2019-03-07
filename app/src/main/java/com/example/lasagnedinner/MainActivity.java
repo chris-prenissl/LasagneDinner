@@ -14,13 +14,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void onProcessing (View view) {
+    public void onProcessing1 (View view) {
         Intent i = new Intent(this, ProcessingActivity.class);
         Bundle b = new Bundle();
-        int buttonId = view.getId();
 
-        b.putInt("speise", buttonId);
-        i.putExtra("bundle", b);
+        b.putInt("speise", 1);
+        i.putExtras(b);
+
+        startActivity(i);
+
+    }
+
+    public void onProcessing2 (View view) {
+        Intent i = new Intent(this, ProcessingActivity.class);
+        Bundle b = new Bundle();
+
+        b.putInt("speise", 2);
+        i.putExtras(b);
 
         startActivity(i);
 

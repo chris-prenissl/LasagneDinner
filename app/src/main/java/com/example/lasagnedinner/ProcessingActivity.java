@@ -3,7 +3,8 @@ package com.example.lasagnedinner;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
+import android.widget.ScrollView;
+import android.widget.TextView;
 
 import java.util.Objects;
 
@@ -20,19 +21,23 @@ public class ProcessingActivity extends AppCompatActivity {
             Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
         }
 
-        Bundle b = getIntent().getBundleExtra("bundle");
-        int buttonId = b.getInt("speise");
-        System.out.println(buttonId);
+        int speiseNr = getIntent().getIntExtra("speise", 0);
 
-        switch (buttonId) {
-            case R.id.vorspeiseButton:
-                System.out.println("Vorspeise");
-            case R.id.hauptspeiseButton:
-                System.out.println("Hauptspeise");
-            case R.id.nachspeiseButton:
-                System.out.println("Nachspeise");
+        System.out.println(speiseNr);
+
+        TextView target;
+
+        switch (speiseNr) {
+            case 1:
+                target = findViewById(R.id.zutatenTitel);
+                target.getParent().getParent().getParent().requestChildFocus(target,target);
+                break;
+
+            case 2:
+                target = findViewById(R.id.schritt4);
+                target.getParent().getParent().getParent().requestChildFocus(target,target);
+                break;
         }
-
 
 
     }

@@ -1,7 +1,54 @@
 <resources>
     <string name="app_name">Lasagne Dinner</string>
     <string name="title_activity_rezept">Rezept</string>
-    <string name="vorspeise_titel">Titel</string>
+    <string name="vorspeise_titel">Vorspeise</string>
     <string name="vorspeise_beschreibung">Vorspeise: Beschreibung</string>
-    <string name="vorspeise_description">Description</string>
+    <string name="hauptspeise_titel">Hauptspeise</string>
+    <string name="hauptspeise_beschreibung">Hauptspeise: Beschreibung</string>
+    <string name="nachspeise_titel">Nachspeise</string>
+    <string name="nachspeise_beschreibung">Nachspeise: Beschreibung</string>
+
+    <string name="zutatenTitel">Zutaten</string>
+
+    <string name="schritttitel1">Schritt1</string>
+    <string name="schritte1">"Schneide das Ciabatta nach Belieben in Scheiben und reibe es mit einer halbierten Knoblauchzehe und Olivenöl gründlich ein."</string>
+    <string name="schrittbilddesc1">"Bild1"</string>
+    <string name="schritt1_zutaten">TODO</string>
+
+    <string name="schritttitel2">Schritt2</string>
+    <string name="schritte2">"Heize den Backofen auf 150°C bei Ober-Unterhitze vor und lege die Ciabatta scheiben auf einen mit Backpapier belegten Rost. Die Scheiben müssen nun bis zur gewünschten Bräune und zum angenehmen Knoblauch-Öl-Duft für ca. 5-10 min. im Ofen bleiben."</string>
+    <string name="schrittbilddesc2">"Bild2"</string>
+    <string name="schritt2_zutaten">Ciabattascheiben</string>
+
+    <string name="schritttitel3">Schritt 3</string>
+    <string name="schrittbilddesc3">Schritt3</string>
+    <string name="schritte3">Schneide nun die Zwiebeln und Tomaten in Würfeln und den Basilikum in Streifen. Mische die Zutaten und würze die Masse mit Salz und Pfeffer.</string>
+    <string name="schritt3_zutaten">Tomaten, Zwiebeln, Basilikum, Meersalz, Pfeffer</string>
+
+    <string name="seperator">"Seperator"</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="count_v_tomaten">0,25</string>
+    <string name="name_v_zwiebeln">Zwiebeln</string>
+    <string name="name_v_knoblauchzehen">Knoblauchzehen</string>
+    <string name="name_v_olivenoel">Olivenöl</string>
+    <string name="name_v_basilikum_bund">Basilikum (Bund)</string>
+    <string name="titel_zutaten_vorspeise">Vorspeise</string>
+    <string name="name_v_tomaten_in_kg">Tomaten in kg</string>
+    <string name="count_v_zwiebeln">0,5</string>
+    <string name="count_v_knoblauch">1</string>
+    <string name="count_v_basilikum">0,5</string>
+    <string name="count_v_ciabatta">0,2</string>
+    <string name="name_v_ciabatta">Ciabatta</string>
+    <string name="name_v_meersalz">Meersalz</string>
+    <string name="name_v_schwarzer_pfeffer">schwarzer Pfeffer</string>
+    <string name="schritttitel4">Schritt 4</string>
+    <string name="schrittbilddesc4">Schritt 4</string>
+    <string name="schritte4">Trage nun die Bruschettamase auf die knusprig duftenden Ciabattascheiben. Nach Wunsch kann das Topping noch mit Olivenöl betreufelt werden. Lässt sich gut mit einem Prosecco als Gruß aus der Küche kombinieren.</string>
+    <string name="schritt4_zutaten">Ciabattascheiben, Bruschettamasse</string>
+
+
+
 </resources>

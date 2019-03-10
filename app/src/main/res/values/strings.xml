@@ -48,7 +48,8 @@
     <string name="schrittbilddesc4">Schritt 4</string>
     <string name="schritte4">Trage nun die Bruschettamase auf die knusprig duftenden Ciabattascheiben. Nach Wunsch kann das Topping noch mit Olivenöl betreufelt werden. Lässt sich gut mit einem Prosecco als Gruß aus der Küche kombinieren.</string>
     <string name="schritt4_zutaten">Ciabattascheiben, Bruschettamasse</string>
-
+    <string name="einkaufsliste_beschreibung">Einkaufsliste: Beschreibung</string>
+    <string name="einkaufsliste_titel">Einkaufsliste</string>
 
 
 </resources>

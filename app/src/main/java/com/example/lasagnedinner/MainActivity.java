@@ -14,6 +14,18 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void onProcessing0 (View view) {
+        Intent i = new Intent(this, ProcessingActivity.class);
+        Bundle b = new Bundle();
+
+        b.putInt("speise", 0);
+        i.putExtras(b);
+
+        startActivity(i);
+
+    }
+
+
     public void onProcessing1 (View view) {
         Intent i = new Intent(this, ProcessingActivity.class);
         Bundle b = new Bundle();

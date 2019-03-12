@@ -10,7 +10,7 @@
 
     <string name="zutatenTitel">Zutaten</string>
 
-    <string name="schritttitel1">Schritt1</string>
+    <string name="schritttitel1">Bruschetta: Schritt1</string>
     <string name="schritte1">"Schneide das Ciabatta nach Belieben in Scheiben und reibe es mit einer halbierten Knoblauchzehe und Olivenöl gründlich ein."</string>
     <string name="schrittbilddesc1">"Bild1"</string>
     <string name="schritt1_zutaten">TODO</string>
@@ -50,6 +50,43 @@
     <string name="schritt4_zutaten">Ciabattascheiben, Bruschettamasse</string>
     <string name="einkaufsliste_beschreibung">Einkaufsliste: Beschreibung</string>
     <string name="einkaufsliste_titel">Einkaufsliste</string>
+    <string name="schritttitel5">Lasagne: Schritt 5</string>
+    <string name="schrittbilddesc5">Schritt 5: Beschreibung</string>
+    <string name="schritte5">Für die Lasagne: Schneide zuerst Karotten und Zwiebeln zu ungefähr gleich großen Würfeln. Dünste das Gemüse in einem guten Stück Butter und Olivenöl für eine halbe Stunde.</string>
+    <string name="schritt5_zutaten">Karotten, Zwiebeln, Butter, Olivenöl</string>
+    <string name="schritttitel6">Bolognese: Schritt 6</string>
+    <string name="schrittbilddesc6">Schritt 6: Beschreibung</string>
+    <string name="schritte6">Brate nun bei hoher Hitze das Rinderhack in einen großen Topf an. Dabei ist es wichtig, die Fleischstücke möglichst kleinzumachen. Löse das braun gebratene Fleisch mit Rotwein ab.</string>
+    <string name="schritt6_zutaten">Rinderhack, Olivenöl, Butter, Rotwein</string>
+    <string name="schritttitel7">Schritt 7</string>
+    <string name="schrittbilddesc7">Schritt 7: Beschreibung</string>
+    <string name="schritte7">Füge nun zum Hackfleisch das Gemüse, die passierten Tomaten und den Knoblauch hinzu. Dies muss nun 1 Stunde (für 1-2 Personen) bzw. 2-3 Stunden (3-6 Personen) bei geringer Temperatur einkochen. Nehme den Topf bei gewünschter Cremigkeit vom Herd. Mit Pfeffer und Salz abschmecken.</string>
+    <string name="schritt7_zutaten">Hackfleisch, Gemüse, Knoblauch, passierte Tomaten, Salz, Pfeffer</string>
+    <string name="schritttitel8">Bechamelsoße: Schritt 8</string>
+    <string name="schrittbilddesc8">Schritt 8: Beschreibung</string>
+    <string name="schritte8">Heize für die Lasagne nun den Ofen auf 210°C vor. Für die Bechamelsoße, schmelze bei 1/3 Temperatur die Butter in einem Topf an und füge zu gleichen Teilen wie die Butter das Mehl hinzu. Rühre mit dem Schneebesen die Mehlschwitze zu einer klebrigen Maße und lasse diese eine leichte Bräune annehmen.</string>
+    <string name="schritt8_zutaten">Butter Mehl</string>
+    <string name="schritttitel9">Schritt 9</string>
+    <string name="schrittbilddesc9">Schritt 9: Beschreibung</string>
+    <string name="schritte9">Schütte nun schrittweise Milch in die Mehlschwitze. Wird die Soße fest, schütte erneut Milch hinzu. Tue dies so lange bis eine schöne cremige Soße entsteht. Mit Salz, Pfeffer und evtl. Muskat abschmecken.</string>
+    <string name="schritt9_zutaten">Milch, Salz, Pfeffer, evtl. Muskatnuss</string>
+    <string name="schritttitel10">Schritt 10</string>
+    <string name="schrittbilddesc10">Schritt 10: Beschreibung</string>
+    <string name="schritte10">Reibe den Bräter nun mit Butter ein. Verteile nun die Zutaten in Schichten.\n1. Schicht: Verteile Hackfleisch am Boden.\n2.Schicht: Verteile Bechamelsoße\n3.Schicht: Verteile die getrockneten Lasagneplatten.\n4.Schicht: Eine weitere Schicht Hackfleisch.\n5.Schicht: Eine weitere Schicht Lasagneplatten.\n6.Schicht: Verteile den zerzupften Mozzarella.\n7.Schicht: Verteile den Rest der Bechamelsoße.</string>
+    <string name="schritt10_zutaten">Bolognese, Bechamelsoße, Mozzarella</string>
+    <string name="schritttitel11">Schritt 11</string>
+    <string name="schrittbilddesc11">Schritt 11: Beschreibung</string>
+    <string name="schritte11">Schiebe nun die Lasagne in den vorgeheizten Backofen (210°C). Die Lasagne braucht nun eine gute halbe Stunde. Wenn man eine knusprige Käseschicht haben will, kann man am Ende noch 5 Minuten auf 250 °C aufdrehen.</string>
+    <string name="schritt11_zutaten">Lasagne</string>
+    <string name="schritttitel12">Bananen: Schritt 12</string>
+    <string name="schrittbilddesc12">Schritt 12: Beschreibung</string>
+    <string name="schritte12">Für die flammbierten Bananen Butter mit Zucker und Zimt in einer Pfanne erhitzen und rühren bis das Ganze zu einem Sirup geschmolzen ist. Füge nun die längs- und querhalbierten Bananen hinzu und erhitze sie. Begieße nun die Bananen mit dem Sirup.</string>
+    <string name="schritt12_zutaten">Bananen, Butter, Zucker, Zimt</string>
+    <string name="schrittbilddesc13">Schritt 13: Beschreibung</string>
+    <string name="schritte13">Serviere nun die Bananen auf dem Teller an und setze Zentral eine große Kugel Vanilleeis.</string>
+    <string name="schritt13_zutaten">Bananen, Vanilleeis</string>
+    <string name="fin">Guten Appetit!</string>
+    <string name="finDesc">fin: Beschreibung</string>
 
 
 </resources>

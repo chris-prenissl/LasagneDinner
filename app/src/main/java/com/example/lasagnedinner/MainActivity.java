@@ -7,11 +7,16 @@ import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
+    public int counter_person;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        System.out.println("create");
+
+        counter_person = getIntent().getIntExtra("count_person", 2);
     }
 
     public void onProcessing0 (View view) {
@@ -19,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle b = new Bundle();
 
         b.putInt("speise", 0);
+        b.putInt("count_person", counter_person);
         i.putExtras(b);
 
         startActivity(i);

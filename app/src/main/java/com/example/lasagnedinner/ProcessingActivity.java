@@ -17,11 +17,32 @@ public class ProcessingActivity extends AppCompatActivity {
 
     public int counter_int = 2;
 
+    //Chiabatta
     public static double tomato_factor = 0.25;
     public static double onions_factor = 0.5;
     public static double garlic_factor = 1;
     public static double basil_factor = 0.5;
     public static double ciabatta_factor = 0.2;
+
+    //Lasagne
+    public static double lasagne_factor = 100;
+    public static double hackfleisch_factor = 100;
+    public static double pastomaten_factor = 200;
+    public static double zwiebeln_factor = 0.5;
+    public static double knoblauch_factor = 0.5;
+    public static double karotten_factor = 0.5;
+    public static double milch_factor = 100;
+    public static double mozzarella_factor = 0.5;
+    public static double mehl_factor = 50;
+    public static double rotwein_factor = 50;
+
+    //Bananen
+    public static double bananen_factor = 1;
+    public static double vanille_factor = 1;
+    public static double rum_factor = 25;
+    public static double bananenlikoer_factor = 25;
+    public static double butter_factor = 25;
+    public static double zucker_factor = 20;
 
 
     @Override
@@ -113,6 +134,7 @@ public class ProcessingActivity extends AppCompatActivity {
     public void updateGrocerylist() {
         DecimalFormat df = new DecimalFormat("#.##");
 
+        //Chiabatta
         TextView tomato_amount = findViewById(R.id.countVTomaten);
         tomato_amount.setText(String.valueOf(df.format(tomato_factor*counter_int)));
         TextView onion_amount = findViewById(R.id.countVZwiebeln);
@@ -124,7 +146,40 @@ public class ProcessingActivity extends AppCompatActivity {
         TextView ciabatta_amount = findViewById(R.id.countVCiabatta);
         ciabatta_amount.setText(String.valueOf(df.format(ciabatta_factor*counter_int)));
 
+        //Lasagne
+        TextView lasagneplatten_amount = findViewById(R.id.countHLasagneplatten);
+        lasagneplatten_amount.setText(String.valueOf(df.format(lasagne_factor*counter_int)));
+        TextView hackfleisch_amount = findViewById(R.id.countHHackfleisch);
+        hackfleisch_amount.setText(String.valueOf(df.format(hackfleisch_factor*counter_int)));
+        TextView pastomaten_amount = findViewById(R.id.countHpassierteTomaten);
+        pastomaten_amount.setText(String.valueOf(df.format(pastomaten_factor*counter_int)));
+        TextView zwiebeln_amount = findViewById(R.id.countHZwiebeln);
+        zwiebeln_amount.setText(String.valueOf(df.format(zwiebeln_factor*counter_int)));
+        TextView knoblauch_amount = findViewById(R.id.countHKnoblauch);
+        knoblauch_amount.setText(String.valueOf(df.format(knoblauch_factor*counter_int)));
+        TextView karotten_amount = findViewById(R.id.countHKarotten);
+        karotten_amount.setText(String.valueOf(df.format(karotten_factor*counter_int)));
+        TextView milch_amount = findViewById(R.id.countHMilch);
+        milch_amount.setText(String.valueOf(df.format(milch_factor*counter_int)));
 
+        setItemCounter(R.id.countHMozzarella,mozzarella_factor);
+        setItemCounter(R.id.countHMehl, mehl_factor);
+        setItemCounter(R.id.countHRotwein, rotwein_factor);
+
+        setItemCounter(R.id.countNBananen, bananen_factor);
+        setItemCounter(R.id.countNButter, butter_factor);
+        setItemCounter(R.id.countNBananenlikoer, bananenlikoer_factor);
+        setItemCounter(R.id.countNVanilleEis, vanille_factor);
+        setItemCounter(R.id.countNRum, rum_factor);
+        setItemCounter(R.id.countNButter, butter_factor);
+        setItemCounter(R.id.countNZucker, zucker_factor);
+    }
+
+    public void setItemCounter (int viewId, double count) {
+        DecimalFormat df = new DecimalFormat("#.##");
+
+        TextView view = findViewById(viewId);
+        view.setText(String.valueOf(df.format(count*counter_int)));
     }
 
 }

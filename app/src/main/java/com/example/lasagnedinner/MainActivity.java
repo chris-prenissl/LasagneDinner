@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
         Bundle b = new Bundle();
 
         b.putInt("speise", 1);
+        b.putInt("count_person", counter_person);
         i.putExtras(b);
 
         startActivity(i);
@@ -48,6 +49,19 @@ public class MainActivity extends AppCompatActivity {
         Bundle b = new Bundle();
 
         b.putInt("speise", 2);
+        b.putInt("count_person", counter_person);
+        i.putExtras(b);
+
+        startActivity(i);
+
+    }
+
+    public void onProcessing3 (View view) {
+        Intent i = new Intent(this, ProcessingActivity.class);
+        Bundle b = new Bundle();
+
+        b.putInt("speise", 3);
+        b.putInt("count_person", counter_person);
         i.putExtras(b);
 
         startActivity(i);

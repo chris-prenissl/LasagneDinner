@@ -84,8 +84,12 @@ public class ProcessingActivity extends AppCompatActivity {
                 break;
 
             case 2:
-                target = findViewById(R.id.schritt4);
+                target = findViewById(R.id.schritt6);
                 target.getParent().requestChildFocus(target,target);
+                break;
+            case 3:
+                target = findViewById(R.id.schritt13);
+                target.getParent().requestChildFocus(target, target);
                 break;
         }
 
@@ -166,6 +170,7 @@ public class ProcessingActivity extends AppCompatActivity {
         setItemCounter(R.id.countHMehl, mehl_factor);
         setItemCounter(R.id.countHRotwein, rotwein_factor);
 
+        //flambierte Bananen
         setItemCounter(R.id.countNBananen, bananen_factor);
         setItemCounter(R.id.countNButter, butter_factor);
         setItemCounter(R.id.countNBananenlikoer, bananenlikoer_factor);

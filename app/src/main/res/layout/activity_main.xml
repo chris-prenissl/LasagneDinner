@@ -119,7 +119,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@drawable/bruschetta_done" />
+                            app:srcCompat="@drawable/bruschetta" />
 
                         <TextView
                             android:id="@+id/vorspeiseTitel"
@@ -226,7 +226,7 @@
                             android:layout_marginEnd="8dp"
                             android:layout_marginBottom="8dp"
                             android:background="@android:color/transparent"
-                            android:onClick="onProcessing2"
+                            android:onClick="onProcessing3"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -241,7 +241,7 @@
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
-                            app:srcCompat="@drawable/banana" />
+                            app:srcCompat="@drawable/flambananen" />
 
                         <TextView
                             android:id="@+id/nachspeiseTitel"

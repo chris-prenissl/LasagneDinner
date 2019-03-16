@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
+import android.support.v4.app.NavUtils;
 
 
 import java.text.DecimalFormat;
@@ -58,9 +59,23 @@ public class ProcessingActivity extends AppCompatActivity {
         counter_person.setText(String.valueOf(counter_int));
 
         if (toolbar != null) {
+
             setSupportActionBar(toolbar);
             Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
             Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
+
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent i = new Intent(ProcessingActivity.this, MainActivity.class);
+                    Bundle b = new Bundle();
+
+                    b.putInt("count_person", counter_int);
+                    i.putExtras(b);
+                    startActivity(i);
+                }
+            });
         }
 
         updateGrocerylist();
@@ -101,13 +116,12 @@ public class ProcessingActivity extends AppCompatActivity {
         Intent i = new Intent(this, MainActivity.class);
         Bundle b = new Bundle();
 
-        System.out.println("back");
-
         b.putInt("count_person", counter_int);
         i.putExtras(b);
         startActivity(i);
 
     }
+
 
 
 

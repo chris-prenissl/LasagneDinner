@@ -16,6 +16,7 @@
 
 
     <style name="Theme" parent="Widget.AppCompat.Light.ActionBar.Solid">
+
     </style>
 
 </resources>

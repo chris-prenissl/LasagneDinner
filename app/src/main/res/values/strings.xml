@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Lasagne Dinner</string>
     <string name="title_activity_rezept">Rezept</string>
-    <string name="vorspeise_titel">Vorspeise</string>
+    <string name="vorspeise_titel">Bruschetta</string>
     <string name="vorspeise_beschreibung">Vorspeise: Beschreibung</string>
-    <string name="hauptspeise_titel">Hauptspeise</string>
+    <string name="hauptspeise_titel">Lasagne Bolognese</string>
     <string name="hauptspeise_beschreibung">Hauptspeise: Beschreibung</string>
-    <string name="nachspeise_titel">Nachspeise</string>
+    <string name="nachspeise_titel">Flambierte Bananen</string>
     <string name="nachspeise_beschreibung">Nachspeise: Beschreibung</string>
 
     <string name="zutatenTitel">Zutaten</string>

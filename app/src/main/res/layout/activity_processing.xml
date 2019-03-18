@@ -1172,7 +1172,7 @@
                         app:layout_constraintHorizontal_bias="0.545"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/schritt5"
-                        app:srcCompat="@drawable/lasagne" />
+                        app:srcCompat="@drawable/schritt5" />
 
                     <TextView
                         android:id="@+id/description5"
@@ -1263,7 +1263,7 @@
                         app:layout_constraintHorizontal_bias="0.545"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/schritt6"
-                        app:srcCompat="@drawable/lasagne" />
+                        app:srcCompat="@drawable/schritt6" />
 
                     <TextView
                         android:id="@+id/description6"
@@ -1354,7 +1354,7 @@
                         app:layout_constraintHorizontal_bias="0.545"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/schritt7"
-                        app:srcCompat="@drawable/lasagne" />
+                        app:srcCompat="@drawable/schritt7" />
 
                     <TextView
                         android:id="@+id/description7"
@@ -1445,7 +1445,7 @@
                         app:layout_constraintHorizontal_bias="0.545"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/schritt8"
-                        app:srcCompat="@drawable/lasagne" />
+                        app:srcCompat="@drawable/schritt8" />
 
                     <TextView
                         android:id="@+id/description8"
@@ -1536,7 +1536,7 @@
                         app:layout_constraintHorizontal_bias="0.545"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/schritt9"
-                        app:srcCompat="@drawable/lasagne" />
+                        app:srcCompat="@drawable/schritt9" />
 
                     <TextView
                         android:id="@+id/description9"
@@ -1627,7 +1627,7 @@
                         app:layout_constraintHorizontal_bias="0.545"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/schritt10"
-                        app:srcCompat="@drawable/lasagne" />
+                        app:srcCompat="@drawable/schritt10" />
 
                     <TextView
                         android:id="@+id/description10"
@@ -1718,7 +1718,7 @@
                         app:layout_constraintHorizontal_bias="0.545"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toBottomOf="@id/schritt11"
-                        app:srcCompat="@drawable/lasagne" />
+                        app:srcCompat="@drawable/schritt11" />
 
                     <TextView
                         android:id="@+id/description11"

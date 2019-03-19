@@ -16,7 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dinner.lasagnedinner.ProcessingActivity"
+        <activity android:name="com.dinner.lasagnedinner.ProcessingBruschettaActivity"
+            android:parentActivityName="com.dinner.lasagnedinner.MainActivity"></activity>
+        <activity android:name="com.dinner.lasagnedinner.ProcessingLasagneActivity"
+            android:parentActivityName="com.dinner.lasagnedinner.MainActivity"></activity>
+        <activity android:name="com.dinner.lasagnedinner.ProcessingBananaActivity"
             android:parentActivityName="com.dinner.lasagnedinner.MainActivity"></activity>
     </application>
 

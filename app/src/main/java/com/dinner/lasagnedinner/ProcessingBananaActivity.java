@@ -1,6 +1,5 @@
 package com.dinner.lasagnedinner;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -32,6 +31,8 @@ public class ProcessingBananaActivity extends AppCompatActivity {
         counter_person.setText(String.valueOf(counter_int));
 
         if (toolbar != null) {
+
+            toolbar.setTitle("Flambierte Bananen");
 
             setSupportActionBar(toolbar);
             Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
@@ -68,20 +69,21 @@ public class ProcessingBananaActivity extends AppCompatActivity {
     }
 
     public void updateGrocerylist() {
-        setItemCounter(R.id.countNBananen, bananen_factor);
-        setItemCounter(R.id.countNButter, butter_factor);
-        setItemCounter(R.id.countNBananenlikoer, bananenlikoer_factor);
-        setItemCounter(R.id.countNVanilleEis, vanille_factor);
-        setItemCounter(R.id.countNRum, rum_factor);
-        setItemCounter(R.id.countNButter, butter_factor);
-        setItemCounter(R.id.countNZucker, zucker_factor);
+        setItemCounter(R.id.countNBananen, bananen_factor, "st");
+        setItemCounter(R.id.countNButter, butter_factor, "g");
+        setItemCounter(R.id.countNBananenlikoer, bananenlikoer_factor, "ml");
+        setItemCounter(R.id.countNVanilleEis, vanille_factor, "Kugel");
+        setItemCounter(R.id.countNRum, rum_factor, "ml");
+        setItemCounter(R.id.countNButter, butter_factor, "g");
+        setItemCounter(R.id.countNZucker, zucker_factor, "g");
     }
 
-    public void setItemCounter (int viewId, double count) {
+    public void setItemCounter (int viewId, double count, String unit) {
         DecimalFormat df = new DecimalFormat("#.##");
+        String text = String.valueOf(df.format(count*counter_int)) + " " + unit;
 
         TextView view = findViewById(viewId);
-        view.setText(String.valueOf(df.format(count*counter_int)));
+        view.setText(text);
     }
 
 }

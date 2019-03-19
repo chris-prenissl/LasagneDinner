@@ -37,6 +37,7 @@ public class ProcessingBruschettaActivity extends AppCompatActivity {
         if (toolbar != null) {
 
             setSupportActionBar(toolbar);
+
             Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
             Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
 
@@ -77,19 +78,20 @@ public class ProcessingBruschettaActivity extends AppCompatActivity {
 
     public void updateGrocerylist() {
 
-        setItemCounter(R.id.countVTomaten, tomato_factor);
-        setItemCounter(R.id.countVZwiebeln, onions_factor);
-        setItemCounter(R.id.countVKnoblauch, garlic_factor);
-        setItemCounter(R.id.countVBasilikum, basil_factor);
-        setItemCounter(R.id.countVCiabatta, ciabatta_factor);
+        setItemCounter(R.id.countVTomaten, tomato_factor, "kg");
+        setItemCounter(R.id.countVZwiebeln, onions_factor, "st");
+        setItemCounter(R.id.countVKnoblauch, garlic_factor, "st");
+        setItemCounter(R.id.countVBasilikum, basil_factor, "Bund");
+        setItemCounter(R.id.countVCiabatta, ciabatta_factor, "st");
 
     }
 
-    public void setItemCounter (int viewId, double count) {
+    public void setItemCounter (int viewId, double count, String unit) {
         DecimalFormat df = new DecimalFormat("#.##");
+        String text = String.valueOf(df.format(count*counter_int)) + " " + unit;
 
         TextView view = findViewById(viewId);
-        view.setText(String.valueOf(df.format(count*counter_int)));
+        view.setText(text);
     }
 
 }

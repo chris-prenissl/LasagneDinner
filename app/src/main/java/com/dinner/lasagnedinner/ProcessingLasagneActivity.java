@@ -37,6 +37,7 @@ public class ProcessingLasagneActivity extends AppCompatActivity {
 
         if (toolbar != null) {
 
+            toolbar.setTitle("Lasagne Bolognese");
             setSupportActionBar(toolbar);
             Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
             Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
@@ -74,23 +75,24 @@ public class ProcessingLasagneActivity extends AppCompatActivity {
 
     public void updateGrocerylist() {
 
-        setItemCounter(R.id.countHLasagneplatten, lasagne_factor);
-        setItemCounter(R.id.countHHackfleisch, hackfleisch_factor);
-        setItemCounter(R.id.countHpassierteTomaten, pastomaten_factor);
-        setItemCounter(R.id.countHZwiebeln, zwiebeln_factor);
-        setItemCounter(R.id.countHKnoblauch, knoblauch_factor);
-        setItemCounter(R.id.countHKarotten, karotten_factor);
-        setItemCounter(R.id.countHMilch, milch_factor);
-        setItemCounter(R.id.countHMozzarella,mozzarella_factor);
-        setItemCounter(R.id.countHMehl, mehl_factor);
-        setItemCounter(R.id.countHRotwein, rotwein_factor);
+        setItemCounter(R.id.countHLasagneplatten, lasagne_factor, "g");
+        setItemCounter(R.id.countHHackfleisch, hackfleisch_factor, "g");
+        setItemCounter(R.id.countHpassierteTomaten, pastomaten_factor, "ml");
+        setItemCounter(R.id.countHZwiebeln, zwiebeln_factor, "st");
+        setItemCounter(R.id.countHKnoblauch, knoblauch_factor, "st");
+        setItemCounter(R.id.countHKarotten, karotten_factor, "st");
+        setItemCounter(R.id.countHMilch, milch_factor, "ml");
+        setItemCounter(R.id.countHMozzarella,mozzarella_factor, "pck");
+        setItemCounter(R.id.countHMehl, mehl_factor, "g");
+        setItemCounter(R.id.countHRotwein, rotwein_factor, "ml");
     }
 
-    public void setItemCounter (int viewId, double count) {
+    public void setItemCounter (int viewId, double count, String unit) {
         DecimalFormat df = new DecimalFormat("#.##");
+        String text = String.valueOf(df.format(count*counter_int)) + " " + unit;
 
         TextView view = findViewById(viewId);
-        view.setText(String.valueOf(df.format(count*counter_int)));
+        view.setText(text);
     }
 
 }

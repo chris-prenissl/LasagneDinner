@@ -26,16 +26,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onProcessing1 (View view) {
-        Intent i = new Intent(this, ProcessingLasagneActivity.class);
+        Intent j = new Intent(this, ProcessingLasagneActivity.class);
 
-        startActivity(i);
+        startActivity(j);
 
     }
 
     public void onProcessing2 (View view) {
-        Intent i = new Intent(this, ProcessingBananaActivity.class);
+        Intent k = new Intent(this, ProcessingBananaActivity.class);
 
-        startActivity(i);
+        startActivity(k);
 
     }
 

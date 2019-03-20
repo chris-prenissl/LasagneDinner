@@ -38,6 +38,7 @@ public class ProcessingLasagneActivity extends AppCompatActivity {
         if (toolbar != null) {
 
             toolbar.setTitle("Lasagne Bolognese");
+
             setSupportActionBar(toolbar);
             Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
             Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);

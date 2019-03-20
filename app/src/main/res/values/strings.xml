@@ -22,7 +22,7 @@
 
     <string name="schritttitel3">Schritt 3</string>
     <string name="schrittbilddesc3">Schritt3</string>
-    <string name="schritte3">Schneide nun die Zwiebeln und Tomaten in Würfel und den Basilikum in Streifen. Mische die Zutaten und würze die Masse mit Basilikum, Salz und Pfeffer.</string>
+    <string name="schritte3">Schneide nun die Zwiebeln und Tomaten in Würfel und das Basilikum in Streifen. Mische die Zutaten und würze die Masse mit Basilikum, Salz und Pfeffer.</string>
     <string name="schritt3_zutaten">Tomaten, Zwiebeln, Basilikum, Meersalz, Pfeffer</string>
 
     <string name="schritttitel4">Schritt 4</string>
@@ -37,7 +37,7 @@
     <string name="schritt5_zutaten">Karotten, Zwiebeln, Butter, Olivenöl</string>
     <string name="schritttitel6">Schritt 2</string>
     <string name="schrittbilddesc6">Schritt 6: Beschreibung</string>
-    <string name="schritte6">Brate nun bei hoher Hitze das Rinderhack mit Olivenöl und Butter in einen großen Topf an. Dabei ist es wichtig, die Fleischstücke möglichst kleinzumachen. Lösche das braun gebratene Fleisch mit Rotwein ab.</string>
+    <string name="schritte6">Brate nun bei hoher Hitze das Rinderhack mit Olivenöl und Butter in einem großen Topf an. Dabei ist es wichtig, die Fleischstücke möglichst klein zu machen. Lösche das braun gebratene Fleisch mit Rotwein ab.</string>
     <string name="schritt6_zutaten">Rinderhack, Olivenöl, Butter, Rotwein</string>
     <string name="schritttitel7">Schritt 3</string>
     <string name="schrittbilddesc7">Schritt 7: Beschreibung</string>
@@ -61,7 +61,7 @@
     <string name="schritt11_zutaten">Lasagne</string>
     <string name="schritttitel12">Schritt 1</string>
     <string name="schrittbilddesc12">Schritt 12: Beschreibung</string>
-    <string name="schritte12">Für die flammbierten Bananen Butter mit Zucker und Zimt in einer Pfanne erhitzen. Rühre das Ganze bis es zu einen Sirup geschmolzen ist. Füge nun die längs- und querhalbierten Bananen hinzu und erhitze sie. Begieße die Bananen mit dem Sirup.</string>
+    <string name="schritte12">Für die flammbierten Bananen Butter mit Zucker und Zimt in einer Pfanne erhitzen. Rühre das Ganze bis es zu einem Sirup geschmolzen ist. Füge nun die längs- und querhalbierten Bananen hinzu und erhitze sie. Begieße die Bananen mit dem Sirup aus der Pfanne.</string>
     <string name="schritt12_zutaten">Bananen, Butter, Zucker, Zimt</string>
     <string name="schritttitel13">Schritt 2</string>
     <string name="schrittbilddesc13">Schritt 13: Beschreibung</string>
@@ -131,6 +131,10 @@
     <string name="count_n_zucker">20</string>
     <string name="name_n_zucker">Zucker</string>
     <string name="name_n_zimt">Zimt</string>
+    <string name="minus">-</string>
+    <string name="personen">Personen</string>
+    <string name="counter">99</string>
+    <string name="plus">+</string>
 
 
 </resources>

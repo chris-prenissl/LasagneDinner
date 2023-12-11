@@ -14,14 +14,15 @@ import com.dinner.lasagnedinner.domain.model.Dish
 
 @Composable
 fun DishItem(
-    dish: Dish
+    dish: Dish,
+    onDishClicked: (Dish) -> Unit = {}
 ) {
     Column(horizontalAlignment = Alignment.CenterHorizontally) {
         Text(dish.title)
         Image(
             painter = painterResource(id = dish.imagePath),
             contentDescription = dish.title,
-            modifier = Modifier.clickable { println("clicked") }
+            modifier = Modifier.clickable { onDishClicked(dish) }
         )
     }
 }

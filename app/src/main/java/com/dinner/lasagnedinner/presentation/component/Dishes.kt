@@ -10,14 +10,18 @@ import com.dinner.lasagnedinner.domain.model.Dish
 
 @Composable
 fun Dishes(
-    dishes: List<Dish>
+    dishes: List<Dish>,
+    onDishClicked: (Dish) -> Unit
 ) {
     LazyColumn(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier.fillMaxSize()
     ) {
         items(dishes) {
-            DishItem(dish = it)
+            DishItem(
+                dish = it,
+                onDishClicked = onDishClicked
+            )
         }
     }
 }

@@ -9,19 +9,23 @@
         android:roundIcon="@mipmap/icon_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.dinner.lasagnedinner.MainActivity">
+        <activity android:name="com.dinner.lasagnedinner.MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.dinner.lasagnedinner.ProcessingBruschettaActivity"
-            android:parentActivityName="com.dinner.lasagnedinner.MainActivity"></activity>
-        <activity android:name="com.dinner.lasagnedinner.ProcessingLasagneActivity"
-            android:parentActivityName="com.dinner.lasagnedinner.MainActivity"></activity>
-        <activity android:name="com.dinner.lasagnedinner.ProcessingBananaActivity"
-            android:parentActivityName="com.dinner.lasagnedinner.MainActivity"></activity>
+        <activity
+            android:name="com.dinner.lasagnedinner.ProcessingBruschettaActivity"
+            android:parentActivityName="com.dinner.lasagnedinner.MainActivity" />
+        <activity
+            android:name="com.dinner.lasagnedinner.ProcessingLasagneActivity"
+            android:parentActivityName="com.dinner.lasagnedinner.MainActivity" />
+        <activity
+            android:name="com.dinner.lasagnedinner.ProcessingBananaActivity"
+            android:parentActivityName="com.dinner.lasagnedinner.MainActivity" />
     </application>
 
 </manifest>

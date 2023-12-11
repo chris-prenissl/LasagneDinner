@@ -1,10 +1,11 @@
 package com.dinner.lasagnedinner;
 
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.text.DecimalFormat;
 import java.util.Objects;
@@ -57,21 +58,6 @@ public class ProcessingBruschettaActivity extends AppCompatActivity {
         int id = view.getId();
         TextView counter_person = findViewById(R.id.count_person);
 
-        switch (id) {
-            case R.id.button_minus:
-                if (counter_int > 1) {
-                    counter_int--;
-                    counter_person.setText(String.valueOf(counter_int));
-                }
-                break;
-
-            case R.id.button_plus:
-                if (counter_int < 6) {
-                    counter_int++;
-                    counter_person.setText(String.valueOf(counter_int));
-                }
-                break;
-        }
         updateGrocerylist();
 
     }

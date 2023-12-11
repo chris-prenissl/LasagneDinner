@@ -1,12 +1,13 @@
 package com.dinner.lasagnedinner;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.TextView;
 
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.text.DecimalFormat;
 import java.util.Objects;
@@ -61,17 +62,14 @@ public class ProcessingActivity extends AppCompatActivity {
             Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(true);
             Objects.requireNonNull(getSupportActionBar()).setDisplayShowHomeEnabled(true);
 
-            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
+            toolbar.setNavigationOnClickListener(v -> {
 
-                    Intent i = new Intent(ProcessingActivity.this, MainActivity.class);
-                    Bundle b = new Bundle();
+                Intent i = new Intent(ProcessingActivity.this, MainActivity.class);
+                Bundle b = new Bundle();
 
-                    b.putInt("count_person", counter_int);
-                    i.putExtras(b);
-                    startActivity(i);
-                }
+                b.putInt("count_person", counter_int);
+                i.putExtras(b);
+                startActivity(i);
             });
         }
 
@@ -110,6 +108,7 @@ public class ProcessingActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         Intent i = new Intent(this, MainActivity.class);
         Bundle b = new Bundle();
 
@@ -127,21 +126,6 @@ public class ProcessingActivity extends AppCompatActivity {
         int id = view.getId();
         TextView counter_person = findViewById(R.id.count_person);
 
-        switch (id) {
-            case R.id.button_minus:
-                if (counter_int > 1) {
-                    counter_int--;
-                    counter_person.setText(String.valueOf(counter_int));
-                }
-                break;
-
-            case R.id.button_plus:
-                if (counter_int < 6) {
-                    counter_int++;
-                    counter_person.setText(String.valueOf(counter_int));
-                }
-                break;
-        }
         updateGrocerylist();
 
     }

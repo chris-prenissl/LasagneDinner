@@ -2,6 +2,7 @@ package com.dinner.lasagnedinner.presentation.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.lazy.LazyColumn
@@ -20,11 +21,13 @@ import com.dinner.lasagnedinner.domain.model.UncountableIngredient
 
 @Composable
 fun Recipe(
-    dish: Dish
+    dish: Dish,
+    padding: PaddingValues
 ) {
     LazyColumn(
         horizontalAlignment = Alignment.CenterHorizontally,
-        modifier = Modifier.fillMaxSize()
+        modifier = Modifier.fillMaxSize(),
+        contentPadding = padding
     ) {
         item {
             Text(dish.title)
@@ -74,6 +77,7 @@ fun RecipePreview() {
                    stepDescription = "Second Step"
                )
            )
-       )
+       ),
+       padding = PaddingValues()
    )
 }

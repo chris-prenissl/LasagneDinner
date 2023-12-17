@@ -37,7 +37,9 @@ fun DishItem(
 ) {
     ElevatedCard(
         shape = ShapeDefaults.Medium,
-        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primary),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.primaryContainer,
+        ),
         modifier =
         Modifier
             .clickable { onDishClicked(dish) }
@@ -72,7 +74,7 @@ fun DishItem(
                 Spacer(
                     modifier =
                     Modifier.size(
-                        width = AppConstants.Size.halfPadding,
+                        width = AppConstants.Size.paddingHalf,
                         height = 0.dp,
                     ),
                 )

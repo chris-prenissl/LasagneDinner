@@ -15,6 +15,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.dinner.lasagnedinner.R
 import com.dinner.lasagnedinner.domain.model.CountableIngredient
 import com.dinner.lasagnedinner.domain.model.Dish
+import com.dinner.lasagnedinner.domain.model.IngredientType
 import com.dinner.lasagnedinner.presentation.style.LasagneDinnerTheme
 
 @Composable
@@ -60,6 +61,7 @@ fun DishesPreview() {
                         CountableIngredient(
                             "Tomato",
                             3,
+                            IngredientType.Amount,
                         ),
                     ),
                     imagePath = R.drawable.bruschetta,
@@ -73,6 +75,7 @@ fun DishesPreview() {
                         CountableIngredient(
                             "Tomato",
                             3,
+                            IngredientType.Amount,
                         ),
                     ),
                     imagePath = R.drawable.lasagne,
@@ -86,6 +89,7 @@ fun DishesPreview() {
                         CountableIngredient(
                             "Bananen",
                             3,
+                            IngredientType.Amount,
                         ),
                     ),
                     imagePath = R.drawable.flambananen,

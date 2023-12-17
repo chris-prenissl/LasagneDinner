@@ -1,11 +1,10 @@
 package com.dinner.lasagnedinner.data.repository
 
 import com.dinner.lasagnedinner.R
-import com.dinner.lasagnedinner.domain.model.CountableIngredient
 import com.dinner.lasagnedinner.domain.model.Dish
 import com.dinner.lasagnedinner.domain.model.DishStep
+import com.dinner.lasagnedinner.domain.model.Ingredient
 import com.dinner.lasagnedinner.domain.model.IngredientType
-import com.dinner.lasagnedinner.domain.model.UncountableIngredient
 import com.dinner.lasagnedinner.domain.repository.RecipeRepository
 
 class RecipeRepositoryImpl : RecipeRepository {
@@ -14,30 +13,45 @@ class RecipeRepositoryImpl : RecipeRepository {
             Dish(
                 title = "Bruschetta",
                 ingredients = listOf(
-                    CountableIngredient(
+                    Ingredient(
                         title = "Tomaten",
-                        value = 2,
+                        value = 2.0f,
                         type = IngredientType.Amount,
                     ),
-                    CountableIngredient(
+                    Ingredient(
                         title = "Zwiebeln",
-                        value = 1,
+                        value = 1.0f,
                         type = IngredientType.Amount,
                     ),
-                    UncountableIngredient(
+                    Ingredient(
                         title = "Olivenöl",
                         value = 30.0f,
                         type = IngredientType.Milliliter,
                     ),
-                    CountableIngredient(
-                        title = "Baguette",
-                        value = 1,
+                    Ingredient(
+                        title = "Ciabatta",
+                        value = 1.0f,
                         type = IngredientType.Amount,
                     ),
-                    CountableIngredient(
+                    Ingredient(
                         title = "Basilikum",
-                        value = 1,
+                        value = 1.0f,
                         type = IngredientType.Truss,
+                    ),
+                    Ingredient(
+                        title = "Knoblauchzehen",
+                        value = 1.0f,
+                        type = IngredientType.Amount,
+                    ),
+                    Ingredient(
+                        title = "Salz",
+                        value = 1.0f,
+                        type = IngredientType.Skosh,
+                    ),
+                    Ingredient(
+                        title = "Pfeffer",
+                        value = 1.0f,
+                        type = IngredientType.Skosh,
                     ),
                 ),
                 imagePath = R.drawable.bruschetta,
@@ -45,10 +59,34 @@ class RecipeRepositoryImpl : RecipeRepository {
                     DishStep(
                         imagePath = R.drawable.schritt1,
                         title = "Baguette Vorbereiten",
-                        stepDescription = "Schneide das Ciabatta nach Belieben in Scheiben und reibe es mit einer halbierten Knoblauchzehe und Olivenöl gründlich ein.",
+                        stepDescription = "Schneide das Ciabatta nach Belieben in Scheiben und reibe " +
+                            "es mit einer halbierten Knoblauchzehe und Olivenöl gründlich ein.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt2,
+                        title = "Backofen Vorheizen",
+                        stepDescription = "Heize den Backofen auf 150°C bei Ober-Unterhitze vor und " +
+                            "lege die Ciabattascheiben auf einen mit Backpapier belegten Rost." +
+                            " Die Scheiben müssen nun bis zur gewünschten Bräune und " +
+                            "angenehmen Knoblauch-Duft für ca. 5-10 min. im Ofen bleiben.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt3,
+                        title = "Topping",
+                        stepDescription = "Schneide nun die Zwiebeln und Tomaten in Würfel und das" +
+                            " Basilikum in Streifen. Mische die Zutaten und würze die Masse " +
+                            "mit Basilikum, Salz und Pfeffer.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt4,
+                        title = "Anrichten",
+                        stepDescription = "Trage nun die Bruschettamasse auf die knusprig" +
+                            " duftenden Ciabattascheiben auf. Nach Wunsch kann das Topping" +
+                            " noch mit Olivenöl beträufelt werden.Das Gericht" +
+                            " lässt sich gut mit Prosecco zu einem Gruß aus der Küche kombinieren.",
                     ),
                 ),
-                durationInMin = 30,
+                durationInMin = 20,
             ),
             Dish(
                 title = "Lasagne",

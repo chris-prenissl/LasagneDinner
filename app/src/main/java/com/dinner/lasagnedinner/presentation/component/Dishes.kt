@@ -13,15 +13,15 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dinner.lasagnedinner.R
-import com.dinner.lasagnedinner.domain.model.CountableIngredient
 import com.dinner.lasagnedinner.domain.model.Dish
+import com.dinner.lasagnedinner.domain.model.Ingredient
 import com.dinner.lasagnedinner.domain.model.IngredientType
 import com.dinner.lasagnedinner.presentation.style.LasagneDinnerTheme
 
 @Composable
 fun Dishes(
     dishes: List<Dish>,
-    onDishClicked: (Dish) -> Unit,
+    onDishClicked: (Dish) -> Unit = {},
 ) {
     Scaffold(
         contentWindowInsets = WindowInsets.safeContent,
@@ -58,9 +58,9 @@ fun DishesPreview() {
                     title = "Bruschetta",
                     ingredients =
                     listOf(
-                        CountableIngredient(
+                        Ingredient(
                             "Tomato",
-                            3,
+                            3.0f,
                             IngredientType.Amount,
                         ),
                     ),
@@ -72,9 +72,9 @@ fun DishesPreview() {
                     title = "Lasagne",
                     ingredients =
                     listOf(
-                        CountableIngredient(
+                        Ingredient(
                             "Tomato",
-                            3,
+                            3.0f,
                             IngredientType.Amount,
                         ),
                     ),
@@ -86,9 +86,9 @@ fun DishesPreview() {
                     title = "Flammbierte Bananen",
                     ingredients =
                     listOf(
-                        CountableIngredient(
+                        Ingredient(
                             "Bananen",
-                            3,
+                            3.0f,
                             IngredientType.Amount,
                         ),
                     ),

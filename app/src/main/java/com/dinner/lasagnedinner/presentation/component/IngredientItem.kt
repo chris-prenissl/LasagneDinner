@@ -11,14 +11,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.dinner.lasagnedinner.domain.model.CountableIngredient
 import com.dinner.lasagnedinner.domain.model.Ingredient
 import com.dinner.lasagnedinner.domain.model.IngredientType
 import com.dinner.lasagnedinner.util.AppConstants
 
 @Composable
 fun IngredientItem(
-    ingredient: Ingredient<*>,
+    ingredient: Ingredient,
 ) {
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
@@ -49,9 +48,9 @@ fun IngredientItem(
 @Composable
 fun IngredientItemPreview() {
     IngredientItem(
-        ingredient = CountableIngredient(
+        ingredient = Ingredient(
             title = "Tomatoes",
-            value = 20,
+            value = 20.0f,
             type = IngredientType.Amount,
         ),
     )

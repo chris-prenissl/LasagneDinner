@@ -12,15 +12,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dinner.lasagnedinner.R
-import com.dinner.lasagnedinner.domain.model.CountableIngredient
 import com.dinner.lasagnedinner.domain.model.Dish
 import com.dinner.lasagnedinner.domain.model.DishStep
+import com.dinner.lasagnedinner.domain.model.Ingredient
 import com.dinner.lasagnedinner.domain.model.IngredientType
-import com.dinner.lasagnedinner.domain.model.UncountableIngredient
 import com.dinner.lasagnedinner.presentation.style.LasagneDinnerTheme
 
 @Composable
-fun Recipe(dish: Dish?) {
+fun Recipe(
+    dish: Dish?,
+    peopleCount: Int = 4,
+    onAddIngredient: () -> Unit = {},
+    onRemoveIngredient: () -> Unit = {},
+) {
     Scaffold { padding ->
         Surface(
             color = MaterialTheme.colorScheme.background,
@@ -41,6 +45,9 @@ fun Recipe(dish: Dish?) {
                     item {
                         IngredientsList(
                             ingredients = it.ingredients,
+                            peopleCount = peopleCount,
+                            onAddIngredient = onAddIngredient,
+                            onRemoveIngredient = onRemoveIngredient,
                         )
                     }
 
@@ -63,12 +70,12 @@ fun RecipePreview() {
                 title = "Lasagne",
                 ingredients =
                 listOf(
-                    CountableIngredient(
+                    Ingredient(
                         title = "Tomatoes",
-                        value = 10,
+                        value = 10.0f,
                         type = IngredientType.Amount,
                     ),
-                    UncountableIngredient(
+                    Ingredient(
                         title = "Meat",
                         value = 300.0f,
                         type = IngredientType.Gram,

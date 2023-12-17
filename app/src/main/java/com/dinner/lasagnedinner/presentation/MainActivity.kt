@@ -5,6 +5,7 @@ import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.platform.LocalLifecycleOwner
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.repeatOnLifecycle
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             val navController = rememberNavController()
+            val peopleCountState = viewModel.peopleCount.collectAsState()
 
             LasagneDinnerTheme {
                 NavHost(
@@ -49,7 +51,12 @@ class MainActivity : AppCompatActivity() {
                         )
                     }
                     composable(Screen.DishRecipe.route) {
-                        Recipe(dish = viewModel.selectedDish)
+                        Recipe(
+                            dish = viewModel.selectedDish,
+                            peopleCount = peopleCountState.value,
+                            onAddIngredient = viewModel::addPerson,
+                            onRemoveIngredient = viewModel::removePerson,
+                        )
                     }
                 }
             }

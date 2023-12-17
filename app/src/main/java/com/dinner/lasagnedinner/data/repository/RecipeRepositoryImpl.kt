@@ -1,7 +1,11 @@
 package com.dinner.lasagnedinner.data.repository
 
 import com.dinner.lasagnedinner.R
+import com.dinner.lasagnedinner.domain.model.CountableIngredient
 import com.dinner.lasagnedinner.domain.model.Dish
+import com.dinner.lasagnedinner.domain.model.DishStep
+import com.dinner.lasagnedinner.domain.model.IngredientType
+import com.dinner.lasagnedinner.domain.model.UncountableIngredient
 import com.dinner.lasagnedinner.domain.repository.RecipeRepository
 
 class RecipeRepositoryImpl : RecipeRepository {
@@ -9,9 +13,41 @@ class RecipeRepositoryImpl : RecipeRepository {
         listOf(
             Dish(
                 title = "Bruschetta",
-                ingredients = emptyList(),
+                ingredients = listOf(
+                    CountableIngredient(
+                        title = "Tomaten",
+                        value = 2,
+                        type = IngredientType.Amount,
+                    ),
+                    CountableIngredient(
+                        title = "Zwiebeln",
+                        value = 1,
+                        type = IngredientType.Amount,
+                    ),
+                    UncountableIngredient(
+                        title = "Olivenöl",
+                        value = 30.0f,
+                        type = IngredientType.Milliliter,
+                    ),
+                    CountableIngredient(
+                        title = "Baguette",
+                        value = 1,
+                        type = IngredientType.Amount,
+                    ),
+                    CountableIngredient(
+                        title = "Basilikum",
+                        value = 1,
+                        type = IngredientType.Truss,
+                    ),
+                ),
                 imagePath = R.drawable.bruschetta,
-                steps = emptyList(),
+                steps = listOf(
+                    DishStep(
+                        imagePath = R.drawable.schritt1,
+                        title = "Baguette Vorbereiten",
+                        stepDescription = "Schneide das Ciabatta nach Belieben in Scheiben und reibe es mit einer halbierten Knoblauchzehe und Olivenöl gründlich ein.",
+                    ),
+                ),
                 durationInMin = 30,
             ),
             Dish(

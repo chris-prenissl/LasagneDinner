@@ -10,4 +10,5 @@ enum class IngredientType(val unit: String? = null) {
     Gram("g"),
     Milliliter("ml"),
     Amount("st"),
+    Truss("Bündel"),
 }

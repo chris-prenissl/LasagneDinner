@@ -49,14 +49,14 @@ fun StepItem(dishStep: DishStep) {
             )
             Row(
                 verticalAlignment = Alignment.CenterVertically,
-                modifier =
-                Modifier
+                modifier = Modifier
                     .fillMaxWidth()
                     .padding(AppConstants.Size.paddingStandard),
             ) {
                 Text(
                     text = dishStep.stepDescription,
                     style = MaterialTheme.typography.bodyLarge,
+                    modifier = Modifier.padding(horizontal = AppConstants.Size.paddingStandard),
                 )
             }
         }

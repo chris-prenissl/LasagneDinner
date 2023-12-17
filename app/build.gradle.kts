@@ -22,7 +22,7 @@ android {
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
+                "proguard-rules.pro",
             )
         }
     }
@@ -45,6 +45,8 @@ android {
         kotlinCompilerExtensionVersion = "1.5.4"
     }
 }
+
+tasks.getByPath("preBuild").dependsOn("ktlintFormat")
 
 dependencies {
 

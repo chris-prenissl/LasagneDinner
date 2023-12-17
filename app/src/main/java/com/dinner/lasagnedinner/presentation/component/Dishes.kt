@@ -1,6 +1,5 @@
 package com.dinner.lasagnedinner.presentation.component
 
-import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.safeContent
@@ -22,21 +21,26 @@ import com.dinner.lasagnedinner.presentation.style.LasagneDinnerTheme
 fun Dishes(
     dishes: List<Dish>,
     onDishClicked: (Dish) -> Unit,
-    padding: PaddingValues
 ) {
-    Surface(
-        contentColor = MaterialTheme.colorScheme.onBackground
-    ) {
-        LazyColumn(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = padding,
+    Scaffold(
+        contentWindowInsets = WindowInsets.safeContent,
+    ) { padding ->
+        Surface(
+            color = MaterialTheme.colorScheme.background,
         ) {
-            items(dishes) {
-                DishItem(
-                    dish = it,
-                    onDishClicked = onDishClicked
-                )
+            LazyColumn(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                contentPadding = padding,
+                modifier =
+                Modifier
+                    .fillMaxSize(),
+            ) {
+                items(dishes) {
+                    DishItem(
+                        dish = it,
+                        onDishClicked = onDishClicked,
+                    )
+                }
             }
         }
     }
@@ -46,48 +50,50 @@ fun Dishes(
 @Composable
 fun DishesPreview() {
     LasagneDinnerTheme {
-        Scaffold(
-            contentWindowInsets = WindowInsets.safeContent
-        ) { padding ->
-            Dishes(
-                dishes = listOf(
-                    Dish(
-                        title = "Bruschetta",
-                        ingredients = listOf(
-                            CountableIngredient(
-                                "Tomato",
-                                3
-                            )
+        Dishes(
+            dishes =
+            listOf(
+                Dish(
+                    title = "Bruschetta",
+                    ingredients =
+                    listOf(
+                        CountableIngredient(
+                            "Tomato",
+                            3,
                         ),
-                        imagePath = R.drawable.bruschetta,
-                        steps = listOf()
                     ),
-                    Dish(
-                        title = "Lasagne",
-                        ingredients = listOf(
-                            CountableIngredient(
-                                "Tomato",
-                                3
-                            )
-                        ),
-                        imagePath = R.drawable.lasagne,
-                        steps = listOf()
-                    ),
-                    Dish(
-                        title = "Flammbierte Bananen",
-                        ingredients = listOf(
-                            CountableIngredient(
-                                "Bananen",
-                                3
-                            )
-                        ),
-                        imagePath = R.drawable.flambananen,
-                        steps = listOf()
-                    )
+                    imagePath = R.drawable.bruschetta,
+                    steps = listOf(),
+                    durationInMin = 20,
                 ),
-                onDishClicked = {},
-                padding = padding
-            )
-        }
+                Dish(
+                    title = "Lasagne",
+                    ingredients =
+                    listOf(
+                        CountableIngredient(
+                            "Tomato",
+                            3,
+                        ),
+                    ),
+                    imagePath = R.drawable.lasagne,
+                    steps = listOf(),
+                    durationInMin = 90,
+                ),
+                Dish(
+                    title = "Flammbierte Bananen",
+                    ingredients =
+                    listOf(
+                        CountableIngredient(
+                            "Bananen",
+                            3,
+                        ),
+                    ),
+                    imagePath = R.drawable.flambananen,
+                    steps = listOf(),
+                    durationInMin = 20,
+                ),
+            ),
+            onDishClicked = {},
+        )
     }
 }

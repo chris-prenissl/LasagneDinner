@@ -2,9 +2,18 @@ package com.dinner.lasagnedinner.presentation.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Card
+import androidx.compose.foundation.layout.size
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Info
+import androidx.compose.material3.CardDefaults
+import androidx.compose.material3.ElevatedCard
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.ShapeDefaults
 import androidx.compose.material3.Text
@@ -18,29 +27,60 @@ import androidx.compose.ui.unit.dp
 import com.dinner.lasagnedinner.R
 import com.dinner.lasagnedinner.domain.model.Dish
 import com.dinner.lasagnedinner.presentation.style.LasagneDinnerTheme
+import com.dinner.lasagnedinner.util.AppConstants
+import com.dinner.lasagnedinner.util.toMinuteString
 
 @Composable
 fun DishItem(
     dish: Dish,
-    onDishClicked: (Dish) -> Unit = {}
+    onDishClicked: (Dish) -> Unit = {},
 ) {
-    Card(
+    ElevatedCard(
         shape = ShapeDefaults.Medium,
+        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primary),
+        modifier =
+        Modifier
+            .clickable { onDishClicked(dish) }
+            .padding(AppConstants.Size.paddingStandard),
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
                 text = dish.title,
-                color = MaterialTheme.colorScheme.onBackground,
-                style = MaterialTheme.typography.titleLarge,
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.padding(AppConstants.Size.paddingStandard),
             )
             Image(
                 painter = painterResource(id = dish.imagePath),
                 contentDescription = dish.title,
-                modifier = Modifier
+                modifier =
+                Modifier
                     .clipToBounds()
-                    .padding(4.dp)
-                    .clickable { onDishClicked(dish) }
+                    .padding(4.dp),
             )
+            Row(
+                horizontalArrangement = Arrangement.End,
+                verticalAlignment = Alignment.CenterVertically,
+                modifier =
+                Modifier
+                    .fillMaxWidth()
+                    .padding(AppConstants.Size.paddingStandard),
+            ) {
+                Icon(
+                    imageVector = Icons.Default.Info,
+                    contentDescription = "Duration of ${dish.durationInMin.toMinuteString()}",
+                )
+                Spacer(
+                    modifier =
+                    Modifier.size(
+                        width = AppConstants.Size.halfPadding,
+                        height = 0.dp,
+                    ),
+                )
+                Text(
+                    text = dish.durationInMin.toMinuteString(),
+                    style = MaterialTheme.typography.labelMedium,
+                )
+            }
         }
     }
 }
@@ -48,12 +88,14 @@ fun DishItem(
 @Preview
 @Composable
 fun DishPreview() {
-    val dish = Dish(
-        title = "Lasagne",
-        ingredients = emptyList(),
-        imagePath = R.drawable.lasagne,
-        steps = listOf()
-    )
+    val dish =
+        Dish(
+            title = "Lasagne",
+            ingredients = emptyList(),
+            imagePath = R.drawable.lasagne,
+            steps = listOf(),
+            durationInMin = 90,
+        )
     LasagneDinnerTheme {
         DishItem(dish)
     }

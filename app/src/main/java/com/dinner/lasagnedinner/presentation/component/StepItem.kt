@@ -8,13 +8,14 @@ import androidx.compose.ui.res.painterResource
 import com.dinner.lasagnedinner.domain.model.DishStep
 
 @Composable
-fun StepItem(
-    dishStep: DishStep
-) {
+fun StepItem(dishStep: DishStep) {
     Column {
-        Image(painter = painterResource(
-            id = dishStep.imagePath),
-            contentDescription = dishStep.stepDescription
+        Image(
+            painter =
+            painterResource(
+                id = dishStep.imagePath,
+            ),
+            contentDescription = dishStep.stepDescription,
         )
         Text(text = dishStep.stepDescription)
     }

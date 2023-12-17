@@ -6,7 +6,8 @@ import com.dinner.lasagnedinner.presentation.MainViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-val appModule = module {
-    single<RecipeRepository> { RecipeRepositoryImpl() }
-    viewModel { MainViewModel(get()) }
-}
+val appModule =
+    module {
+        single<RecipeRepository> { RecipeRepositoryImpl() }
+        viewModel { MainViewModel(get()) }
+    }

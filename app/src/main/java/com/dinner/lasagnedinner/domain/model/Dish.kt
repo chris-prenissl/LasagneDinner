@@ -5,4 +5,5 @@ data class Dish(
     val ingredients: List<Ingredient<*>>,
     val imagePath: Int,
     val steps: List<DishStep>,
+    val durationInMin: Int,
 )

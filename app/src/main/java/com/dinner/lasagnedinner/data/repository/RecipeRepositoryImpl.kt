@@ -3,8 +3,8 @@ package com.dinner.lasagnedinner.data.repository
 import com.dinner.lasagnedinner.R
 import com.dinner.lasagnedinner.domain.model.Dish
 import com.dinner.lasagnedinner.domain.model.DishStep
-import com.dinner.lasagnedinner.domain.model.Ingredient
 import com.dinner.lasagnedinner.domain.model.IngredientType
+import com.dinner.lasagnedinner.domain.model.OnePersonIngredient
 import com.dinner.lasagnedinner.domain.repository.RecipeRepository
 
 class RecipeRepositoryImpl : RecipeRepository {
@@ -13,42 +13,42 @@ class RecipeRepositoryImpl : RecipeRepository {
             Dish(
                 title = "Bruschetta",
                 ingredients = listOf(
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Tomaten",
-                        value = 2.0f,
+                        value = 0.5f,
                         type = IngredientType.Amount,
                     ),
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Zwiebeln",
-                        value = 1.0f,
+                        value = 0.25f,
                         type = IngredientType.Amount,
                     ),
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Olivenöl",
-                        value = 30.0f,
+                        value = 10.0f,
                         type = IngredientType.Milliliter,
                     ),
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Ciabatta",
-                        value = 1.0f,
+                        value = 0.25f,
                         type = IngredientType.Amount,
                     ),
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Basilikum",
-                        value = 1.0f,
+                        value = 0.25f,
                         type = IngredientType.Truss,
                     ),
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Knoblauchzehen",
-                        value = 1.0f,
+                        value = 0.5f,
                         type = IngredientType.Amount,
                     ),
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Salz",
                         value = 1.0f,
                         type = IngredientType.Skosh,
                     ),
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Pfeffer",
                         value = 1.0f,
                         type = IngredientType.Skosh,
@@ -90,16 +90,199 @@ class RecipeRepositoryImpl : RecipeRepository {
             ),
             Dish(
                 title = "Lasagne",
-                ingredients = emptyList(),
+                ingredients = listOf(
+                    OnePersonIngredient(
+                        title = "Rinderhackfleisch",
+                        value = 100.0f,
+                        type = IngredientType.Gram,
+                    ),
+                    OnePersonIngredient(
+                        title = "Rotwein",
+                        value = 25.0f,
+                        type = IngredientType.Milliliter,
+                    ),
+                    OnePersonIngredient(
+                        title = "Butter",
+                        value = 12.5f,
+                        type = IngredientType.Gram,
+                    ),
+                    OnePersonIngredient(
+                        title = "Olivenöl",
+                        value = 12.5f,
+                        type = IngredientType.Milliliter,
+                    ),
+                    OnePersonIngredient(
+                        title = "Karotten",
+                        value = 0.5f,
+                        type = IngredientType.Amount,
+                    ),
+                    OnePersonIngredient(
+                        title = "Zwiebeln",
+                        value = 0.5f,
+                        type = IngredientType.Amount,
+                    ),
+                    OnePersonIngredient(
+                        title = "Selerie Staude",
+                        value = 0.25f,
+                        type = IngredientType.Amount,
+                    ),
+                    OnePersonIngredient(
+                        title = "Knoblauchzehe",
+                        value = 0.25f,
+                        type = IngredientType.Amount,
+                    ),
+                    OnePersonIngredient(
+                        title = "Passierte Tomaten",
+                        value = 125.0f,
+                        type = IngredientType.Milliliter,
+                    ),
+                    OnePersonIngredient(
+                        title = "Mehl",
+                        value = 10.0f,
+                        type = IngredientType.Gram,
+                    ),
+                    OnePersonIngredient(
+                        title = "Milch",
+                        value = 50.0f,
+                        type = IngredientType.Milliliter,
+                    ),
+                    OnePersonIngredient(
+                        title = "Lasagneplatten",
+                        value = 3.0f,
+                        type = IngredientType.Amount,
+                    ),
+                    OnePersonIngredient(
+                        title = "Mozzarella",
+                        value = 50f,
+                        type = IngredientType.Gram,
+                    ),
+                    OnePersonIngredient(
+                        title = "Salz",
+                        value = 1.0f,
+                        type = IngredientType.Skosh,
+                    ),
+                    OnePersonIngredient(
+                        title = "Pfeffer",
+                        value = 1.0f,
+                        type = IngredientType.Skosh,
+                    ),
+                ),
                 imagePath = R.drawable.lasagne,
-                steps = emptyList(),
-                durationInMin = 90,
+                steps = listOf(
+                    DishStep(
+                        imagePath = R.drawable.schritt5,
+                        title = "Sofrito",
+                        stepDescription = "Für die Lasagne: Schneide zuerst Karotten, Zwiebeln" +
+                            " und Selerie zu ungefähr gleich großen Würfeln. Lasse das Gemüse " +
+                            "in einem guten Stück Butter und Olivenöl für eine halbe " +
+                            "Stunde andünsten.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt6,
+                        title = "Bolognese",
+                        stepDescription = "Brate nun bei hoher Hitze das Rinderhack mit Olivenöl" +
+                            " und Butter in einem großen Topf an. Dabei ist es wichtig, die" +
+                            " Fleischstücke möglichst klein zu stoßen. Lösche das braun" +
+                            " gebratene Fleisch mit Rotwein ab.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt7,
+                        title = "Bolognese",
+                        stepDescription = "Füge nun zum Hackfleisch das Gemüse, die passierten" +
+                            " Tomaten und den Knoblauch hinzu. Dies muss nun 45 Minuten" +
+                            " (für 1-2 Personen) bzw. 1-2 Stunden (3-6 Personen) bei " +
+                            "geringer Temperatur einkochen. Nehme den Topf bei gewünschter " +
+                            "Cremigkeit vom Herd. Mit Pfeffer und Salz abschmecken.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt8,
+                        title = "Bechamelsoße",
+                        stepDescription = "Heize für die Lasagne nun den Ofen auf 180°C vor. " +
+                            "Für die Bechamelsoße: Schmelze die Butter in" +
+                            " einem Topf an und füge zu gleichen Teilen der Butter das" +
+                            " Mehl hinzu. Rühre mit dem Schneebesen die Mehlschwitze" +
+                            " zu einer leicht festen Masse und " +
+                            "lasse diese eine leichte Bräune annehmen.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt9,
+                        title = "Bechamelsoße",
+                        stepDescription = "Schütte nun schrittweise Milch in die Mehlschwitze. " +
+                            "Wird die Soße fest, füge erneut Milch hinzu. Wiederhole diesen" +
+                            " Schritt bis eine cremige Soße entsteht. Mit Salz, Pfeffer und " +
+                            "evtl. Muskat abschmecken.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt10,
+                        title = "Lasagne einschichten",
+                        stepDescription = "Reibe den Bräter nun mit Butter ein. " +
+                            "Verteile die Zutaten in Schichten.\n1. Schicht: Verteile " +
+                            "Hackfleisch am Boden.\n2.Schicht: Verteile Bechamelsoße" +
+                            "\n3.Schicht: Verteile die getrockneten Lasagneplatten." +
+                            "\n4.Schicht: Eine weitere Schicht Hackfleisch.\n5.Schicht: " +
+                            "Eine weitere Schicht Lasagneplatten.\n6.Schicht: " +
+                            "Verteile den zerzupften Mozzarella.\n7.Schicht: Verteile " +
+                            "den Rest der Bechamelsoße.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt11,
+                        title = "Lasagne backen",
+                        stepDescription = "Schiebe nun die Lasagne in den vorgeheizten" +
+                            " Backofen bei 180°C. Die Lasagne braucht ca. 45 Minuten. " +
+                            "Guten Appetit:)",
+                    ),
+                ),
+                durationInMin = 100,
             ),
             Dish(
                 title = "Flammbierte Bananen",
-                ingredients = emptyList(),
+                ingredients = listOf(
+                    OnePersonIngredient(
+                        title = "Bananen",
+                        value = 1.0f,
+                        type = IngredientType.Amount,
+                    ),
+                    OnePersonIngredient(
+                        title = "Zucker",
+                        value = 10.0f,
+                        type = IngredientType.Gram,
+                    ),
+                    OnePersonIngredient(
+                        title = "Zimt",
+                        value = 1.0f,
+                        type = IngredientType.Skosh,
+                    ),
+                    OnePersonIngredient(
+                        title = "Butter",
+                        value = 10.0f,
+                        type = IngredientType.Gram,
+                    ),
+                    OnePersonIngredient(
+                        title = "Rum",
+                        value = 20.0f,
+                        type = IngredientType.Milliliter,
+                    ),
+                ),
                 imagePath = R.drawable.flambananen,
-                steps = emptyList(),
+                steps = listOf(
+                    DishStep(
+                        imagePath = R.drawable.schritt12,
+                        title = "Bananen anbraten",
+                        stepDescription = "Für die flammbierten Bananen Butter mit " +
+                            "Zucker und Zimt in einer Pfanne erhitzen. Rühre das Ganze " +
+                            "bis es zu einem Sirup geschmolzen ist. Füge nun die längs- " +
+                            "und querhalbierten Bananen hinzu und erhitze sie. Begieße die " +
+                            "Bananen mit dem Sirup aus der Pfanne.",
+                    ),
+                    DishStep(
+                        imagePath = R.drawable.schritt13,
+                        title = "Banane flammbieren",
+                        stepDescription = "Gieße nun den Rum über die Bananen und entzünde sie" +
+                            " mit einen Streichholz. Serviere alsbald der Rum sich " +
+                            "verflüchtigt hat, die Bananen auf dem Teller zusammen " +
+                            "mit Vanilleeis an.",
+                    ),
+                ),
                 durationInMin = 20,
             ),
         )

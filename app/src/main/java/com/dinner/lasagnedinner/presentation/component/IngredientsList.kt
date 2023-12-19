@@ -19,13 +19,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.dinner.lasagnedinner.domain.model.Ingredient
 import com.dinner.lasagnedinner.domain.model.IngredientType
+import com.dinner.lasagnedinner.domain.model.OnePersonIngredient
 import com.dinner.lasagnedinner.util.AppConstants
 
 @Composable
 fun IngredientsList(
-    ingredients: List<Ingredient>,
+    ingredients: List<OnePersonIngredient>,
     peopleCount: Int = 4,
     onAddIngredient: () -> Unit = {},
     onRemoveIngredient: () -> Unit = {},
@@ -46,7 +46,10 @@ fun IngredientsList(
                 modifier = Modifier.padding(AppConstants.Size.paddingDouble),
             )
             ingredients.forEach {
-                IngredientItem(ingredient = it)
+                IngredientItem(
+                    ingredient = it,
+                    peopleCount = peopleCount,
+                )
             }
             Row(
                 verticalAlignment = Alignment.CenterVertically,
@@ -70,12 +73,12 @@ fun IngredientsList(
 fun IngredientsListPreview() {
     IngredientsList(
         ingredients = listOf(
-            Ingredient(
+            OnePersonIngredient(
                 title = "Tomatoes",
                 value = 4.0f,
                 type = IngredientType.Amount,
             ),
-            Ingredient(
+            OnePersonIngredient(
                 title = "Meat",
                 value = 400.0f,
                 type = IngredientType.Gram,

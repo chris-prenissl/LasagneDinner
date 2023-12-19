@@ -17,8 +17,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.dinner.lasagnedinner.R
 import com.dinner.lasagnedinner.domain.model.Dish
-import com.dinner.lasagnedinner.domain.model.Ingredient
 import com.dinner.lasagnedinner.domain.model.IngredientType
+import com.dinner.lasagnedinner.domain.model.OnePersonIngredient
 import com.dinner.lasagnedinner.presentation.style.LasagneDinnerTheme
 import com.dinner.lasagnedinner.util.AppConstants
 
@@ -70,7 +70,7 @@ fun DishesPreview() {
                     title = "Bruschetta",
                     ingredients =
                     listOf(
-                        Ingredient(
+                        OnePersonIngredient(
                             "Tomato",
                             3.0f,
                             IngredientType.Amount,
@@ -84,7 +84,7 @@ fun DishesPreview() {
                     title = "Lasagne",
                     ingredients =
                     listOf(
-                        Ingredient(
+                        OnePersonIngredient(
                             "Tomato",
                             3.0f,
                             IngredientType.Amount,
@@ -98,7 +98,7 @@ fun DishesPreview() {
                     title = "Flammbierte Bananen",
                     ingredients =
                     listOf(
-                        Ingredient(
+                        OnePersonIngredient(
                             "Bananen",
                             3.0f,
                             IngredientType.Amount,

@@ -23,8 +23,8 @@ import androidx.compose.ui.unit.dp
 import com.dinner.lasagnedinner.R
 import com.dinner.lasagnedinner.domain.model.Dish
 import com.dinner.lasagnedinner.domain.model.DishStep
-import com.dinner.lasagnedinner.domain.model.Ingredient
 import com.dinner.lasagnedinner.domain.model.IngredientType
+import com.dinner.lasagnedinner.domain.model.OnePersonIngredient
 import com.dinner.lasagnedinner.presentation.style.LasagneDinnerTheme
 import com.dinner.lasagnedinner.util.AppConstants
 
@@ -107,12 +107,12 @@ fun RecipePreview() {
                 title = "Lasagne",
                 ingredients =
                 listOf(
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Tomatoes",
                         value = 10.0f,
                         type = IngredientType.Amount,
                     ),
-                    Ingredient(
+                    OnePersonIngredient(
                         title = "Meat",
                         value = 300.0f,
                         type = IngredientType.Gram,

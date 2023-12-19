@@ -1,6 +1,6 @@
 package com.dinner.lasagnedinner.domain.model
 
-data class Ingredient(
+data class OnePersonIngredient(
     val title: String,
     val value: Float,
     val type: IngredientType,

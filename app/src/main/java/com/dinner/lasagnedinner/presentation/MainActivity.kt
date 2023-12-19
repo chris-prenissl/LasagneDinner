@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
                             peopleCount = peopleCountState.value,
                             onAddIngredient = viewModel::addPerson,
                             onRemoveIngredient = viewModel::removePerson,
+                            onBackButtonPress = { navController.navigateUp() },
                         )
                     }
                 }

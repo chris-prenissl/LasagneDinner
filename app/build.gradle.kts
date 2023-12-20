@@ -11,8 +11,8 @@ android {
         applicationId = "com.dinner.lasagnedinner"
         minSdk = 24
         targetSdk = 34
-        versionCode = 10
-        versionName = "2.0.1"
+        versionCode = 11
+        versionName = "2.0.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -62,6 +62,7 @@ dependencies {
     implementation("androidx.activity:activity-compose:1.8.2")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
     implementation("androidx.navigation:navigation-compose:2.7.6")
+    implementation("io.coil-kt:coil-compose:2.5.0")
 
     debugImplementation("androidx.compose.ui:ui-tooling")
 

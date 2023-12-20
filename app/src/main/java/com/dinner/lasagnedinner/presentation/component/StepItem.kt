@@ -1,6 +1,5 @@
 package com.dinner.lasagnedinner.presentation.component
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -14,9 +13,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import coil.compose.AsyncImage
 import com.dinner.lasagnedinner.R
 import com.dinner.lasagnedinner.domain.model.DishStep
 import com.dinner.lasagnedinner.presentation.style.LasagneDinnerTheme
@@ -39,8 +38,8 @@ fun StepItem(dishStep: DishStep) {
                 style = MaterialTheme.typography.headlineSmall,
                 modifier = Modifier.padding(AppConstants.Size.paddingStandard),
             )
-            Image(
-                painter = painterResource(id = dishStep.imagePath),
+            AsyncImage(
+                model = dishStep.imagePath,
                 contentDescription = dishStep.title,
                 modifier =
                 Modifier

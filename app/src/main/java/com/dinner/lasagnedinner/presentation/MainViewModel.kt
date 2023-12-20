@@ -45,7 +45,7 @@ class MainViewModel(
     }
 
     fun removePerson() {
-        if (_peopleCount.value > 0) {
+        if (_peopleCount.value > 1) {
             _peopleCount.update { it.minus(1) }
         }
     }

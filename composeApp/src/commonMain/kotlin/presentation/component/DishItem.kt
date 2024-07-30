@@ -54,6 +54,7 @@ fun DishItem(
             Image(
                 bitmap = imageResource(dish.image),
                 contentDescription = dish.title,
+                modifier = Modifier.padding(AppConstants.Size.paddingStandard),
             )
             Row(
                 horizontalArrangement = Arrangement.End,

@@ -1,20 +1,19 @@
 [versions]
-koin = "4.0.0-RC1"
-lifecycleViewmodelComposeVersion = "2.8.0"
 minSdk = "24"
-navigationComposeVersion = "2.7.0-alpha07"
 targetSdk = "34"
 compileSdk = "34"
 versionCode = "11"
 versionName = "2.0.2"
 activityCompose = "1.9.1"
 androidApplication = "8.3.0"
-
 composeCompiler = "1.6.11"
 coil3 = "3.0.0-alpha06"
 gradleKtlint = "12.0.3"
 junit = "4.13.2"
+koin = "4.0.0-RC1"
 kotlin = "2.0.0"
+lifecycleViewmodelComposeVersion = "2.8.0"
+navigationComposeVersion = "2.7.0-alpha07"
 
 [libraries]
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }

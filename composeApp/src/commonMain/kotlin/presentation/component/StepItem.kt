@@ -41,6 +41,7 @@ fun StepItem(dishStep: DishStep) {
             Image(
                 bitmap = imageResource(dishStep.image),
                 contentDescription = dishStep.title,
+                modifier = Modifier.padding(AppConstants.Size.paddingStandard),
             )
             Row(
                 verticalAlignment = Alignment.CenterVertically,

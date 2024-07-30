@@ -1,12 +1,11 @@
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
-import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import data.repository.RecipeRepositoryImpl
+import org.koin.compose.viewmodel.koinViewModel
 import presentation.MainViewModel
 import presentation.component.Dishes
 import presentation.component.Recipe
@@ -17,10 +16,7 @@ import util.Screen
 @Composable
 fun App(
     navController: NavHostController = rememberNavController(),
-    viewModel: MainViewModel = viewModel {
-        val recipeRepository = RecipeRepositoryImpl()
-        MainViewModel(recipeRepository)
-    },
+    viewModel: MainViewModel = koinViewModel(),
 ) {
     val peopleCountState = viewModel.peopleCount.collectAsState()
     LasagneDinnerTheme {

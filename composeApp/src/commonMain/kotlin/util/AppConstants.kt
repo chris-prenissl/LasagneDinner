@@ -11,5 +11,6 @@ sealed class AppConstants {
         val paddingStandard = 8.dp
         val paddingHalf = 4.dp
         val listBottomSpace = 60.dp
+        val iconButtonSize = 24.dp
     }
 }

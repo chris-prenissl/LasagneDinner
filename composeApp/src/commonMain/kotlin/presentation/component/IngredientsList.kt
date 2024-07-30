@@ -5,9 +5,9 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
-import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.ElevatedCard
 import androidx.compose.material3.Icon
@@ -20,6 +20,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import domain.model.IngredientType
 import domain.model.OnePersonIngredient
+import lasagnedinner.composeapp.generated.resources.Res
+import lasagnedinner.composeapp.generated.resources.remove
+import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import util.AppConstants
 
@@ -56,11 +59,11 @@ fun IngredientsList(
                 horizontalArrangement = Arrangement.SpaceEvenly,
                 modifier = Modifier.fillMaxWidth(),
             ) {
-                IconButton(onClick = onRemoveIngredient) {
-                    Icon(Icons.Default.Clear, "Person entfernen")
+                IconButton(onClick = onRemoveIngredient, modifier = Modifier.size(AppConstants.Size.iconButtonSize)) {
+                    Icon(painterResource(Res.drawable.remove), "Person entfernen")
                 }
                 Text(text = peopleCount.toString())
-                IconButton(onClick = onAddIngredient) {
+                IconButton(onClick = onAddIngredient, modifier = Modifier.size(AppConstants.Size.iconButtonSize)) {
                     Icon(Icons.Default.Add, "Person hinzufügen")
                 }
             }

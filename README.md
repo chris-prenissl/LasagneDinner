@@ -12,6 +12,8 @@ _Kotlin Multiplatform_ | _Android_ | _Java_ | _Kotlin_ | _iOS_ | _Koin_ | _Compo
 
 ## Images
 
+![iOS](screenshots/screenshot_ios.png) ![Android](screenshots/screenshot_android.png)
+
 ## Usage
 
 ### Prerequisites

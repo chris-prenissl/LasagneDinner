@@ -20,7 +20,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.dinner.lasagnedinner.R
+import com.dinner.lasagnedinner.android.R
 import com.dinner.lasagnedinner.domain.model.Dish
 import com.dinner.lasagnedinner.domain.model.DishStep
 import com.dinner.lasagnedinner.domain.model.IngredientType

@@ -15,7 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.dinner.lasagnedinner.R
+import com.dinner.lasagnedinner.android.R
 import com.dinner.lasagnedinner.domain.model.Dish
 import com.dinner.lasagnedinner.domain.model.IngredientType
 import com.dinner.lasagnedinner.domain.model.OnePersonIngredient

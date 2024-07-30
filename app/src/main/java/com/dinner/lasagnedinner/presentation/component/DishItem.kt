@@ -23,7 +23,7 @@ import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
-import com.dinner.lasagnedinner.R
+import com.dinner.lasagnedinner.android.R
 import com.dinner.lasagnedinner.domain.model.Dish
 import com.dinner.lasagnedinner.presentation.style.LasagneDinnerTheme
 import com.dinner.lasagnedinner.util.AppConstants

@@ -1,6 +1,6 @@
 package com.dinner.lasagnedinner.data.repository
 
-import com.dinner.lasagnedinner.R
+import com.dinner.lasagnedinner.android.R
 import com.dinner.lasagnedinner.domain.model.Dish
 import com.dinner.lasagnedinner.domain.model.DishStep
 import com.dinner.lasagnedinner.domain.model.IngredientType

@@ -16,7 +16,7 @@ gradleKtlint = "12.0.3"
 junit = "4.13.2"
 koinAndroid = "3.5.3"
 lifecycleViewmodelCompose = "2.8.4"
-kotlinAndroid = "1.9.24"
+kotlin = "2.0.0"
 material = "1.12.0"
 navigationCompose = "2.7.7"
 
@@ -39,5 +39,8 @@ navigation-compose = { module = "androidx.navigation:navigation-compose", versio
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "androidApplication" }
-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinAndroid" }
+androidLibrary = { id = "com.android.library", version.ref = "androidApplication" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 gradle-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "gradleKtlint" }

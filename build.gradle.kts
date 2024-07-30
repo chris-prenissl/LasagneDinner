@@ -18,5 +18,8 @@ subprojects {
             reporter(ReporterType.JSON)
         }
         version.set("0.50.0")
+        filter {
+            exclude("**/generated/**")
+        }
     }
 }

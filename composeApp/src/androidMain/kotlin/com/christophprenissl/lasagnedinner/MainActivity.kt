@@ -1,4 +1,4 @@
-package com.dinner.lasagnedinner
+package com.christophprenissl.lasagnedinner
 
 import App
 import android.os.Bundle

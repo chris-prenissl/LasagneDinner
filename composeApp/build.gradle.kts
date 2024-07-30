@@ -24,6 +24,7 @@ kotlin {
         iosTarget.binaries.framework {
             baseName = "ComposeApp"
             isStatic = true
+            freeCompilerArgs += "-Xbinary=bundleId=com.christophprenissl.lasagnedinner"
         }
     }
 
@@ -55,7 +56,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.dinner.lasagnedinner"
+    namespace = "com.christophprenissl.lasagnedinner"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
@@ -63,7 +64,7 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/resources")
 
     defaultConfig {
-        applicationId = "com.dinner.lasagnedinner"
+        applicationId = "com.christophprenissl.lasagnedinner"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = libs.versions.versionCode.get().toInt()

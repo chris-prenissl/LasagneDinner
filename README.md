@@ -1,18 +1,23 @@
+<img src="screenshots/play_icon.jpeg" alt="App Icon" width="64"/>
+
 # LasagneDinner
 
 ## Overview
 
-Lasagne Dinner is a small project that began as my first learning experience with Android using 
-XML-based layouts and Java. It has evolved over time into a cross-platform application 
+Lasagne Dinner is a small project that began as my first learning experience with Android using
+XML-based layouts and Java. It has evolved over time into a cross-platform application
 utilizing Kotlin Multiplatform and Compose Multiplatform.
+
+Find it on [Google PlayStore](https://play.google.com/store/apps/details?id=com.dinner.lasagnedinner)
 
 ## Technologies
 
-_Kotlin Multiplatform_ | _Android_ | _Java_ | _Kotlin_ | _iOS_ | _Koin_ | _Compose Multiplatform_ 
+_Kotlin Multiplatform_ | _Android_ | _Java_ | _Kotlin_ | _iOS_ | _Koin_ | _Compose Multiplatform_ | _Google PlayStore_
 
 ## Images
 
-![iOS](screenshots/screenshot_ios.png) ![Android](screenshots/screenshot_android.png)
+<img src="screenshots/screenshot_android.png" alt="Android Screenshot" height="400"/>
+<img src="screenshots/screenshot_ios.png" alt="iOS Screenshot" height="400"/>
 
 ## Usage
 
@@ -24,6 +29,7 @@ _Kotlin Multiplatform_ | _Android_ | _Java_ | _Kotlin_ | _iOS_ | _Koin_ | _Compo
 ### Installation
 
 1. Clone this repository:
+
    ```bash
    git clone https://github.com/chris-prenissl/LasagneDinner.git
    ```

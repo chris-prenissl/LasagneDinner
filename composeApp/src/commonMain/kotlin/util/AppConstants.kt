@@ -5,6 +5,7 @@ import androidx.compose.ui.unit.dp
 sealed class AppConstants {
     object Meta {
         const val APP_NAME = "Lasagne Dinner"
+        const val PRIVACY_POLICY_URL = "https://chris-prenissl.github.io/lasagne-dinner.html"
     }
     object Size {
         val paddingDouble = 16.dp

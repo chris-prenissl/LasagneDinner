@@ -1,6 +1,8 @@
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
+import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.platform.UriHandler
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -10,6 +12,7 @@ import presentation.MainViewModel
 import presentation.component.Dishes
 import presentation.component.Recipe
 import presentation.style.LasagneDinnerTheme
+import util.AppConstants
 import util.ObserveAsEvents
 import util.Screen
 
@@ -17,6 +20,7 @@ import util.Screen
 fun App(
     navController: NavHostController = rememberNavController(),
     viewModel: MainViewModel = koinViewModel(),
+    uriHandler: UriHandler = LocalUriHandler.current,
 ) {
     val peopleCountState = viewModel.peopleCount.collectAsState()
     LasagneDinnerTheme {
@@ -38,6 +42,7 @@ fun App(
                     Dishes(
                         dishes = viewModel.dishes,
                         onDishClicked = viewModel::setDish,
+                        onPrivacyPolicyClicked = { uriHandler.openUri(AppConstants.Meta.PRIVACY_POLICY_URL) },
                     )
                 }
             }

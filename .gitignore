@@ -20,4 +20,4 @@ captures
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
 **/release
-*.kra
+**.kra

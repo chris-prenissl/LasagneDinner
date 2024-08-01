@@ -65,7 +65,7 @@ android {
     sourceSets["main"].resources.srcDirs("src/commonMain/composeResources")
 
     defaultConfig {
-        applicationId = "com.christophprenissl.lasagnedinner"
+        applicationId = "com.dinner.lasagnedinner"
         minSdk = libs.versions.minSdk.get().toInt()
         targetSdk = libs.versions.targetSdk.get().toInt()
         versionCode = libs.versions.versionCode.get().toInt()

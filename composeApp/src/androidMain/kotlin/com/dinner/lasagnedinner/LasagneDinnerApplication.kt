@@ -1,4 +1,4 @@
-package com.christophprenissl.lasagnedinner
+package com.dinner.lasagnedinner
 
 import android.app.Application
 import di.initKoin

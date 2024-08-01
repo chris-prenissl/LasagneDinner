@@ -57,7 +57,7 @@ kotlin {
 }
 
 android {
-    namespace = "com.christophprenissl.lasagnedinner"
+    namespace = "com.dinner.lasagnedinner"
     compileSdk = libs.versions.compileSdk.get().toInt()
 
     sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")

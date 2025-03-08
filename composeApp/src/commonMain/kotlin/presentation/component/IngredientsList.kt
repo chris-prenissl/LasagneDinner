@@ -18,12 +18,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import domain.model.IngredientType
 import domain.model.OnePersonIngredient
 import lasagnedinner.composeapp.generated.resources.Res
 import lasagnedinner.composeapp.generated.resources.remove
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 import util.AppConstants
 
 @Composable
@@ -69,23 +67,4 @@ fun IngredientsList(
             }
         }
     }
-}
-
-@Preview
-@Composable
-fun IngredientsListPreview() {
-    IngredientsList(
-        ingredients = listOf(
-            OnePersonIngredient(
-                title = "Tomatoes",
-                value = 4.0f,
-                type = IngredientType.Amount,
-            ),
-            OnePersonIngredient(
-                title = "Meat",
-                value = 400.0f,
-                type = IngredientType.Gram,
-            ),
-        ),
-    )
 }

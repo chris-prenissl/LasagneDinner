@@ -20,15 +20,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import domain.model.Dish
-import domain.model.DishStep
-import domain.model.IngredientType
-import domain.model.OnePersonIngredient
-import lasagnedinner.composeapp.generated.resources.Res
-import lasagnedinner.composeapp.generated.resources.lasagne
-import lasagnedinner.composeapp.generated.resources.schritt10
-import lasagnedinner.composeapp.generated.resources.schritt6
-import org.jetbrains.compose.ui.tooling.preview.Preview
-import presentation.style.LasagneDinnerTheme
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -96,46 +87,5 @@ fun Recipe(
                 }
             }
         }
-    }
-}
-
-@Preview
-@Composable
-fun RecipePreview() {
-    LasagneDinnerTheme {
-        Recipe(
-            dish =
-            Dish(
-                title = "Lasagne",
-                ingredients =
-                listOf(
-                    OnePersonIngredient(
-                        title = "Tomatoes",
-                        value = 10.0f,
-                        type = IngredientType.Amount,
-                    ),
-                    OnePersonIngredient(
-                        title = "Meat",
-                        value = 300.0f,
-                        type = IngredientType.Gram,
-                    ),
-                ),
-                image = Res.drawable.lasagne,
-                steps =
-                listOf(
-                    DishStep(
-                        image = Res.drawable.schritt6,
-                        title = "First Step",
-                        stepDescription = "First Step",
-                    ),
-                    DishStep(
-                        image = Res.drawable.schritt10,
-                        title = "Second",
-                        stepDescription = "Second Step",
-                    ),
-                ),
-                durationInMin = 90,
-            ),
-        )
     }
 }

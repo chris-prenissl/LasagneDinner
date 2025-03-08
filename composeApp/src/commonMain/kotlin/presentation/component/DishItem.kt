@@ -22,11 +22,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import domain.model.Dish
-import lasagnedinner.composeapp.generated.resources.Res
-import lasagnedinner.composeapp.generated.resources.lasagne
 import org.jetbrains.compose.resources.imageResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
-import presentation.style.LasagneDinnerTheme
 import util.AppConstants
 import util.toMinuteString
 
@@ -81,21 +77,5 @@ fun DishItem(
                 )
             }
         }
-    }
-}
-
-@Preview
-@Composable
-fun DishPreview() {
-    val dish =
-        Dish(
-            title = "Lasagne",
-            ingredients = emptyList(),
-            image = Res.drawable.lasagne,
-            steps = listOf(),
-            durationInMin = 90,
-        )
-    LasagneDinnerTheme {
-        DishItem(dish)
     }
 }

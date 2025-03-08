@@ -24,14 +24,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import domain.model.Dish
-import domain.model.IngredientType
-import domain.model.OnePersonIngredient
-import lasagnedinner.composeapp.generated.resources.Res
-import lasagnedinner.composeapp.generated.resources.bruschetta
-import lasagnedinner.composeapp.generated.resources.flambananen
-import lasagnedinner.composeapp.generated.resources.lasagne
-import org.jetbrains.compose.ui.tooling.preview.Preview
-import presentation.style.LasagneDinnerTheme
 import util.AppConstants
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -84,60 +76,5 @@ fun Dishes(
                     .align(Alignment.BottomCenter),
             )
         }
-    }
-}
-
-@Preview
-@Composable
-fun DishesPreview() {
-    LasagneDinnerTheme {
-        Dishes(
-            dishes =
-            listOf(
-                Dish(
-                    title = "Bruschetta",
-                    ingredients =
-                    listOf(
-                        OnePersonIngredient(
-                            "Tomato",
-                            3.0f,
-                            IngredientType.Amount,
-                        ),
-                    ),
-                    image = Res.drawable.bruschetta,
-                    steps = listOf(),
-                    durationInMin = 20,
-                ),
-                Dish(
-                    title = "Lasagne",
-                    ingredients =
-                    listOf(
-                        OnePersonIngredient(
-                            "Tomato",
-                            3.0f,
-                            IngredientType.Amount,
-                        ),
-                    ),
-                    image = Res.drawable.lasagne,
-                    steps = listOf(),
-                    durationInMin = 90,
-                ),
-                Dish(
-                    title = "Flammbierte Bananen",
-                    ingredients =
-                    listOf(
-                        OnePersonIngredient(
-                            "Bananen",
-                            3.0f,
-                            IngredientType.Amount,
-                        ),
-                    ),
-                    image = Res.drawable.flambananen,
-                    steps = listOf(),
-                    durationInMin = 20,
-                ),
-            ),
-            onDishClicked = {},
-        )
     }
 }

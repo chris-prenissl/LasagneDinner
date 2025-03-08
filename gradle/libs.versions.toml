@@ -2,8 +2,8 @@
 minSdk = "24"
 targetSdk = "35"
 compileSdk = "35"
-versionName = "2.1.1"
-versionCode = "14"
+versionName = "2.1.2"
+versionCode = "15"
 activityCompose = "1.10.1"
 androidApplication = "8.9.0"
 composeCompiler = "1.7.0"
@@ -22,6 +22,7 @@ coil-compose-core = { module = "io.coil-kt.coil3:coil-compose-core", version.ref
 coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil3" }
 coil-mp = { module = "io.coil-kt.coil3:coil", version.ref = "coil3" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 jetbrains-lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelComposeVersion" }
 jetbrains-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "navigationComposeVersion" }
 junit = { module = "junit:junit", version.ref = "junit" }

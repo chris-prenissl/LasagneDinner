@@ -37,6 +37,7 @@ kotlin {
             implementation(compose.runtime)
             implementation(compose.foundation)
             implementation(compose.material3)
+            implementation(compose.materialIconsExtended)
             implementation(compose.ui)
             implementation(compose.components.resources)
             implementation(compose.components.uiToolingPreview)
@@ -46,9 +47,7 @@ kotlin {
             implementation(libs.koin.viewmodel)
             implementation(libs.jetbrains.lifecycle.viewmodel.compose)
             implementation(libs.jetbrains.navigation.compose)
-            implementation(libs.coil.compose.core)
             implementation(libs.coil.compose)
-            implementation(libs.coil.mp)
             implementation(libs.coil.network.ktor)
         }
     }
@@ -91,5 +90,3 @@ android {
 dependencies {
     debugImplementation(libs.compose.ui.tooling)
 }
-
-tasks.getByPath("preBuild").dependsOn("ktlintFormat")

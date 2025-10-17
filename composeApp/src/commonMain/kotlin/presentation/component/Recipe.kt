@@ -78,10 +78,11 @@ fun Recipe(
 
                     item {
                         Spacer(
-                            modifier = Modifier.size(
-                                width = 0.dp,
-                                height = 40.dp,
-                            ),
+                            modifier =
+                                Modifier.size(
+                                    width = 0.dp,
+                                    height = 40.dp,
+                                ),
                         )
                     }
                 }

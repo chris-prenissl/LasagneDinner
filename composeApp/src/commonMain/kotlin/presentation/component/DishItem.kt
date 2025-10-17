@@ -33,13 +33,14 @@ fun DishItem(
 ) {
     ElevatedCard(
         shape = ShapeDefaults.Medium,
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer,
-        ),
+        colors =
+            CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.primaryContainer,
+            ),
         modifier =
-        Modifier
-            .clickable { onDishClicked(dish) }
-            .padding(AppConstants.Size.paddingStandard),
+            Modifier
+                .clickable { onDishClicked(dish) }
+                .padding(AppConstants.Size.paddingStandard),
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
@@ -56,9 +57,9 @@ fun DishItem(
                 horizontalArrangement = Arrangement.End,
                 verticalAlignment = Alignment.CenterVertically,
                 modifier =
-                Modifier
-                    .fillMaxWidth()
-                    .padding(AppConstants.Size.paddingStandard),
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(AppConstants.Size.paddingStandard),
             ) {
                 Icon(
                     imageVector = Icons.AutoMirrored.Outlined.List,
@@ -66,10 +67,10 @@ fun DishItem(
                 )
                 Spacer(
                     modifier =
-                    Modifier.size(
-                        width = AppConstants.Size.paddingHalf,
-                        height = 0.dp,
-                    ),
+                        Modifier.size(
+                            width = AppConstants.Size.paddingHalf,
+                            height = 0.dp,
+                        ),
                 )
                 Text(
                     text = dish.durationInMin.toMinuteString(),

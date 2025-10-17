@@ -20,12 +20,13 @@ import util.AppConstants
 fun StepItem(dishStep: DishStep) {
     ElevatedCard(
         shape = ShapeDefaults.Medium,
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer,
-        ),
+        colors =
+            CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.primaryContainer,
+            ),
         modifier =
-        Modifier
-            .padding(AppConstants.Size.paddingStandard),
+            Modifier
+                .padding(AppConstants.Size.paddingStandard),
     ) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text(
@@ -40,9 +41,10 @@ fun StepItem(dishStep: DishStep) {
             Text(
                 text = dishStep.stepDescription,
                 style = MaterialTheme.typography.bodyLarge,
-                modifier = Modifier
-                    .background(color = MaterialTheme.colorScheme.secondaryContainer)
-                    .padding(AppConstants.Size.paddingDouble),
+                modifier =
+                    Modifier
+                        .background(color = MaterialTheme.colorScheme.secondaryContainer)
+                        .padding(AppConstants.Size.paddingDouble),
             )
         }
     }

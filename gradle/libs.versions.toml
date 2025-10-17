@@ -1,26 +1,23 @@
 [versions]
 minSdk = "24"
-targetSdk = "35"
-compileSdk = "35"
+targetSdk = "36"
+compileSdk = "36"
 versionName = "2.1.2"
 versionCode = "15"
-activityCompose = "1.10.1"
-androidApplication = "8.9.0"
-composeCompiler = "1.7.0"
-coil3 = "3.0.0-alpha06"
-gradleKtlint = "12.0.3"
+activityCompose = "1.11.0"
+androidApplication = "8.13.0"
+composeCompiler = "1.9.1"
+coil3 = "3.3.0"
 junit = "4.13.2"
-koin = "4.0.0-RC1"
-kotlin = "2.1.0"
-lifecycleViewmodelComposeVersion = "2.8.0"
-navigationComposeVersion = "2.7.0-alpha07"
+koin = "4.1.1"
+kotlin = "2.2.20"
+lifecycleViewmodelComposeVersion = "2.9.5"
+navigationComposeVersion = "2.9.1"
 
 [libraries]
 activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
 coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coil3" }
-coil-compose-core = { module = "io.coil-kt.coil3:coil-compose-core", version.ref = "coil3" }
-coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor", version.ref = "coil3" }
-coil-mp = { module = "io.coil-kt.coil3:coil", version.ref = "coil3" }
+coil-network-ktor = { module = "io.coil-kt.coil3:coil-network-ktor3", version.ref = "coil3" }
 compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" }
 jetbrains-lifecycle-viewmodel-compose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycleViewmodelComposeVersion" }
@@ -37,4 +34,3 @@ compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "
 jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "composeCompiler" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlinMultiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
-gradle-ktlint = { id = "org.jlleitschuh.gradle.ktlint", version.ref = "gradleKtlint" }

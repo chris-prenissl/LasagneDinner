@@ -43,50 +43,50 @@ fun DishesPreview() {
     LasagneDinnerTheme {
         Dishes(
             dishes =
-            listOf(
-                Dish(
-                    title = "Bruschetta",
-                    ingredients =
-                    listOf(
-                        OnePersonIngredient(
-                            "Tomato",
-                            3.0f,
-                            IngredientType.Amount,
-                        ),
+                listOf(
+                    Dish(
+                        title = "Bruschetta",
+                        ingredients =
+                            listOf(
+                                OnePersonIngredient(
+                                    "Tomato",
+                                    3.0f,
+                                    IngredientType.Amount,
+                                ),
+                            ),
+                        image = Res.drawable.bruschetta,
+                        steps = listOf(),
+                        durationInMin = 20,
                     ),
-                    image = Res.drawable.bruschetta,
-                    steps = listOf(),
-                    durationInMin = 20,
-                ),
-                Dish(
-                    title = "Lasagne",
-                    ingredients =
-                    listOf(
-                        OnePersonIngredient(
-                            "Tomato",
-                            3.0f,
-                            IngredientType.Amount,
-                        ),
+                    Dish(
+                        title = "Lasagne",
+                        ingredients =
+                            listOf(
+                                OnePersonIngredient(
+                                    "Tomato",
+                                    3.0f,
+                                    IngredientType.Amount,
+                                ),
+                            ),
+                        image = Res.drawable.lasagne,
+                        steps = listOf(),
+                        durationInMin = 90,
                     ),
-                    image = Res.drawable.lasagne,
-                    steps = listOf(),
-                    durationInMin = 90,
-                ),
-                Dish(
-                    title = "Flammbierte Bananen",
-                    ingredients =
-                    listOf(
-                        OnePersonIngredient(
-                            "Bananen",
-                            3.0f,
-                            IngredientType.Amount,
-                        ),
+                    Dish(
+                        title = "Flammbierte Bananen",
+                        ingredients =
+                            listOf(
+                                OnePersonIngredient(
+                                    "Bananen",
+                                    3.0f,
+                                    IngredientType.Amount,
+                                ),
+                            ),
+                        image = Res.drawable.flambananen,
+                        steps = listOf(),
+                        durationInMin = 20,
                     ),
-                    image = Res.drawable.flambananen,
-                    steps = listOf(),
-                    durationInMin = 20,
                 ),
-            ),
             onDishClicked = {},
         )
     }
@@ -96,11 +96,12 @@ fun DishesPreview() {
 @Composable
 fun IngredientItemPreview() {
     IngredientItem(
-        ingredient = OnePersonIngredient(
-            title = "Tomatoes",
-            value = 20.0f,
-            type = IngredientType.Amount,
-        ),
+        ingredient =
+            OnePersonIngredient(
+                title = "Tomatoes",
+                value = 20.0f,
+                type = IngredientType.Amount,
+            ),
         peopleCount = 4,
     )
 }
@@ -109,18 +110,19 @@ fun IngredientItemPreview() {
 @Composable
 fun IngredientsListPreview() {
     IngredientsList(
-        ingredients = listOf(
-            OnePersonIngredient(
-                title = "Tomatoes",
-                value = 4.0f,
-                type = IngredientType.Amount,
+        ingredients =
+            listOf(
+                OnePersonIngredient(
+                    title = "Tomatoes",
+                    value = 4.0f,
+                    type = IngredientType.Amount,
+                ),
+                OnePersonIngredient(
+                    title = "Meat",
+                    value = 400.0f,
+                    type = IngredientType.Gram,
+                ),
             ),
-            OnePersonIngredient(
-                title = "Meat",
-                value = 400.0f,
-                type = IngredientType.Gram,
-            ),
-        ),
     )
 }
 
@@ -130,37 +132,37 @@ fun RecipePreview() {
     LasagneDinnerTheme {
         Recipe(
             dish =
-            Dish(
-                title = "Lasagne",
-                ingredients =
-                listOf(
-                    OnePersonIngredient(
-                        title = "Tomatoes",
-                        value = 10.0f,
-                        type = IngredientType.Amount,
-                    ),
-                    OnePersonIngredient(
-                        title = "Meat",
-                        value = 300.0f,
-                        type = IngredientType.Gram,
-                    ),
+                Dish(
+                    title = "Lasagne",
+                    ingredients =
+                        listOf(
+                            OnePersonIngredient(
+                                title = "Tomatoes",
+                                value = 10.0f,
+                                type = IngredientType.Amount,
+                            ),
+                            OnePersonIngredient(
+                                title = "Meat",
+                                value = 300.0f,
+                                type = IngredientType.Gram,
+                            ),
+                        ),
+                    image = Res.drawable.lasagne,
+                    steps =
+                        listOf(
+                            DishStep(
+                                image = Res.drawable.schritt6,
+                                title = "First Step",
+                                stepDescription = "First Step",
+                            ),
+                            DishStep(
+                                image = Res.drawable.schritt10,
+                                title = "Second",
+                                stepDescription = "Second Step",
+                            ),
+                        ),
+                    durationInMin = 90,
                 ),
-                image = Res.drawable.lasagne,
-                steps =
-                listOf(
-                    DishStep(
-                        image = Res.drawable.schritt6,
-                        title = "First Step",
-                        stepDescription = "First Step",
-                    ),
-                    DishStep(
-                        image = Res.drawable.schritt10,
-                        title = "Second",
-                        stepDescription = "Second Step",
-                    ),
-                ),
-                durationInMin = 90,
-            ),
         )
     }
 }
@@ -170,11 +172,12 @@ fun RecipePreview() {
 fun StepItemPreview() {
     LasagneDinnerTheme {
         StepItem(
-            dishStep = DishStep(
-                image = Res.drawable.schritt1,
-                title = "Step 19",
-                stepDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-            ),
+            dishStep =
+                DishStep(
+                    image = Res.drawable.schritt1,
+                    title = "Step 19",
+                    stepDescription = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+                ),
         )
     }
 }

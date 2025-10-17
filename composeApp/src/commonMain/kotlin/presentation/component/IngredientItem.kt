@@ -20,22 +20,24 @@ fun IngredientItem(
 ) {
     Row(
         horizontalArrangement = Arrangement.SpaceBetween,
-        modifier = Modifier
-            .fillMaxWidth()
-            .padding(
-                horizontal = AppConstants.Size.paddingDouble,
-                vertical = AppConstants.Size.paddingStandard,
-            ),
+        modifier =
+            Modifier
+                .fillMaxWidth()
+                .padding(
+                    horizontal = AppConstants.Size.paddingDouble,
+                    vertical = AppConstants.Size.paddingStandard,
+                ),
     ) {
         Text(text = ingredient.title)
         Row {
             Text(text = (ingredient.value * peopleCount).toString())
             ingredient.type.unit?.let {
                 Spacer(
-                    modifier = Modifier.size(
-                        width = AppConstants.Size.paddingHalf,
-                        height = 0.dp,
-                    ),
+                    modifier =
+                        Modifier.size(
+                            width = AppConstants.Size.paddingHalf,
+                            height = 0.dp,
+                        ),
                 )
                 Text(text = it)
             }

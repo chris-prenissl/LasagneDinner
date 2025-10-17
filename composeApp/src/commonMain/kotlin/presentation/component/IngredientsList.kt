@@ -33,9 +33,10 @@ fun IngredientsList(
 ) {
     ElevatedCard(
         shape = ShapeDefaults.Medium,
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer,
-        ),
+        colors =
+            CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.primaryContainer,
+            ),
         modifier = Modifier.padding(AppConstants.Size.paddingStandard),
     ) {
         Column(

@@ -7,11 +7,12 @@ import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 import presentation.MainViewModel
 
-private val appModule = module {
-    single<RecipeRepository> { RecipeRepositoryImpl() }
+private val appModule =
+    module {
+        single<RecipeRepository> { RecipeRepositoryImpl() }
 
-    viewModel { MainViewModel(get()) }
-}
+        viewModel { MainViewModel(get()) }
+    }
 
 fun initKoin() {
     startKoin {

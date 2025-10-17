@@ -51,8 +51,8 @@ fun Dishes(
                     horizontalAlignment = Alignment.CenterHorizontally,
                     contentPadding = padding,
                     modifier =
-                    Modifier
-                        .fillMaxSize(),
+                        Modifier
+                            .fillMaxSize(),
                 ) {
                     items(dishes) {
                         DishItem(
@@ -64,16 +64,18 @@ fun Dishes(
             }
             Text(
                 text = "Datenschutzerklärung",
-                style = TextStyle(
-                    fontWeight = FontWeight.Bold,
-                    textDecoration = TextDecoration.Underline,
-                    textAlign = TextAlign.Center,
-                ),
-                modifier = Modifier.fillMaxWidth()
-                    .background(MaterialTheme.colorScheme.background)
-                    .clickable(onClick = onPrivacyPolicyClicked)
-                    .padding(AppConstants.Size.paddingStandard)
-                    .align(Alignment.BottomCenter),
+                style =
+                    TextStyle(
+                        fontWeight = FontWeight.Bold,
+                        textDecoration = TextDecoration.Underline,
+                        textAlign = TextAlign.Center,
+                    ),
+                modifier =
+                    Modifier.fillMaxWidth()
+                        .background(MaterialTheme.colorScheme.background)
+                        .clickable(onClick = onPrivacyPolicyClicked)
+                        .padding(AppConstants.Size.paddingStandard)
+                        .align(Alignment.BottomCenter),
             )
         }
     }
